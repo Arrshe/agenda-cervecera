@@ -1,15 +1,15 @@
 <h2>¡Regístrate!</h2>
 
 <div class="container">
-    <form class="form-agregar-cancion" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <form class="form-agregar-cancion">
 
         <!--********** INPUT NOMBRE CONTACTO ***********-->
         <div class="form-agregar-cancion__form-group">
 
-            <label for="nombreContacto">Nombre:</label>
-            <input type="text" class="form-control" formControlName="nombreContacto" required>
+            <label for="nombreContacto">Tu nombre:</label>
+            <input type="text" class="form-control" required>
 
-            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('nombreContacto')?.invalid">
+            <small class="form-agregar-cancion__form-group__msg-error" >
                 Tienes que insertar el nombre de una canción
             </small>
         </div>
@@ -17,10 +17,10 @@
         <!--********** INPUT TELEFONO CONTACTO ***********-->
         <div class="form-agregar-cancion__form-group">
 
-            <label for="telefono">Telefono:</label>
-            <input type="text" class="form-control" formControlName="telefono" required>
+            <label for="telefono">Tu teléfono:</label>
+            <input type="text" class="form-control" required>
 
-            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('telefono')?.invalid">
+            <small class="form-agregar-cancion__form-group__msg-error">
                 Tienes que insertar el nombre de una canción
             </small>
         </div>
@@ -28,10 +28,10 @@
         <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
         <div class="form-agregar-cancion__form-group">
 
-            <label for="fechaNacimiento">Fecha de nacimiento:</label>
-            <input type="date" class="form-control" formControlName="fechaNacimiento" required>
+            <label for="fechaNacimiento">Tu fecha de nacimiento:</label>
+            <input type="date" class="form-control"  required>
 
-            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('fechaNacimiento')?.invalid">
+            <small class="form-agregar-cancion__form-group__msg-error" >
                 Tienes que insertar el nombre de una canción
             </small>
         </div>
@@ -39,14 +39,14 @@
         <!--********** INPUT SEXO CONTACTO ***********-->
         <div class="form-agregar-cancion__form-group">
 
-            <label for="sexo">Sexo:</label>
-            <select name="sexo" class="form-control" formControlName="sexo" required>
+            <label for="sexo">Tu sexo:</label>
+            <select name="sexo" class="form-control" required>
                 <option value="value1">Hombre</option>
                 <option value="value2" selected>Mujer</option>
             </select>
             
 
-            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('sexo')?.invalid">
+            <small class="form-agregar-cancion__form-group__msg-error" >
                 Tienes que insertar el nombre de una canción
             </small>
         </div>
@@ -54,19 +54,19 @@
         <!--********** INPUT SEXO CONTACTO ***********-->
         <div class="form-agregar-cancion__form-group">
 
-            <label for="cervezasFavoritas">Cervezas favoritas:</label>
-            <select name="sexo" class="form-control" formControlName="cervezasFavoritas" required>
+            <label for="cervezasFavoritas">Tus cervezas favoritas:</label>
+            <select name="sexo" class="form-control"  required>
                 <option value="value1">Hombre</option>
                 <option value="value2" selected>Mujer</option>
             </select>
             
 
-            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('cervezasFavoritas')?.invalid">
+            <small class="form-agregar-cancion__form-group__msg-error">
                 Tienes que insertar el nombre de una canción
             </small>
         </div>
 
         <!--********** INPUT SUBMIT ***********-->
-        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar" [disabled]="formulario.invalid">
+        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar" >
     </form>
 </div>
