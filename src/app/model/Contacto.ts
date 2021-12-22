@@ -1,7 +1,7 @@
 import Cerveza from './Cerveza';
 
 export default interface Contacto {
-    nombre:string;
+    nombreContacto:string;
     telefono:string;
     fechaNacimiento:string;
     sexo:string;
