@@ -1,1 +1,72 @@
-<p>alta-contacto works!</p>
+<h2>¡Regístrate!</h2>
+
+<div class="container">
+    <form class="form-agregar-cancion" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+        <!--********** INPUT NOMBRE CONTACTO ***********-->
+        <div class="form-agregar-cancion__form-group">
+
+            <label for="nombreContacto">Nombre:</label>
+            <input type="text" class="form-control" formControlName="nombreContacto" required>
+
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('nombreContacto')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+        </div>
+
+        <!--********** INPUT TELEFONO CONTACTO ***********-->
+        <div class="form-agregar-cancion__form-group">
+
+            <label for="telefono">Telefono:</label>
+            <input type="text" class="form-control" formControlName="telefono" required>
+
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('telefono')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+        </div>
+
+        <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
+        <div class="form-agregar-cancion__form-group">
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" class="form-control" formControlName="fechaNacimiento" required>
+
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('fechaNacimiento')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+        </div>
+
+        <!--********** INPUT SEXO CONTACTO ***********-->
+        <div class="form-agregar-cancion__form-group">
+
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" class="form-control" formControlName="sexo" required>
+                <option value="value1">Hombre</option>
+                <option value="value2" selected>Mujer</option>
+            </select>
+            
+
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('sexo')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+        </div>
+
+        <!--********** INPUT SEXO CONTACTO ***********-->
+        <div class="form-agregar-cancion__form-group">
+
+            <label for="cervezasFavoritas">Cervezas favoritas:</label>
+            <select name="sexo" class="form-control" formControlName="cervezasFavoritas" required>
+                <option value="value1">Hombre</option>
+                <option value="value2" selected>Mujer</option>
+            </select>
+            
+
+            <small class="form-agregar-cancion__form-group__msg-error" *ngIf="formulario.get('cervezasFavoritas')?.invalid">
+                Tienes que insertar el nombre de una canción
+            </small>
+        </div>
+
+        <!--********** INPUT SUBMIT ***********-->
+        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar" [disabled]="formulario.invalid">
+    </form>
+</div>
