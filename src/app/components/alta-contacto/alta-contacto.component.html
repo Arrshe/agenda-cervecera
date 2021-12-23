@@ -1,74 +1,80 @@
-<h2>¡Regístrate!</h2>
+<main class="agenda-cervecera-main">
+    <div class="agenda-cervecera-main__registro">
 
-<div class="container">
-    <form class="form-agregar-cancion">
+        <!--********** FORMULARIO IZQUIERDA ***********-->
+        <form class="agenda-cervecera-main__registro__form">
+            <h2 class="agenda-cervecera-main__registro__form__titulo">¡Regístrate!</h2>
 
-        <!--********** INPUT NOMBRE CONTACTO ***********-->
-        <div>
-
-            <label for="nombreContacto">Tu nombre:</label>
-            <input type="text" class="form-control" required>
-
-            <small>
-                Tienes que insertar tu nombre (máximo 30 caracteres)
-            </small>
-        </div>
-
-        <!--********** INPUT TELEFONO CONTACTO ***********-->
-        <div>
-
-            <label for="telefono">Tu teléfono:</label>
-            <input type="text" class="form-control" required>
-
-            <small>
-                Tienes que insertar tu número de teléfono
-            </small>
-        </div>
-
-        <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
-        <div>
-
-            <label for="fechaNacimiento">Tu fecha de nacimiento:</label>
-            <input type="date" class="form-control" required>
-
-            <small>
-                Tienes que insertar tu fecha de nacimiento
-            </small>
-        </div>
-
-        <!--********** INPUT SEXO CONTACTO ***********-->
-        <div>
-            <label for="sexo">Tu sexo:</label>
-            <div *ngFor="let sexo of sexos; let i=index">
-                <input type="radio" name="sexo" [value]="sexo">{{ sexo }} 
+            <!--********** INPUT NOMBRE CONTACTO ***********-->
+            <div class="agenda-cervecera-main__registro__form__item--nombreContacto">
+                <label class="agenda-cervecera-main__registro__form__item--nombreContacto__label" for="nombreContacto">Tu nombre:</label>
+                <input class="agenda-cervecera-main__registro__form__item--nombreContacto__input" type="text" class="form-control" required>
+                
+                <!--********** MSG SI NO VALIDO ***********-->
+                <small class="agenda-cervecera-main__registro__form__item--nombreContacto__small">
+                    Tienes que insertar tu nombre (máximo 30 caracteres)
+                </small>
             </div>
-         
-            <small>
-                Tienes que insertar tu sexo
-            </small>
-        </div>
-        
-        
-        <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
-        
-    <div>
-        
-        <label for="cervezasFavoritas">Tus cervezas favoritas:</label>
-        <div *ngFor="let cerveza of cervezas; let i=index">
-            <label>
-                <input type="checkbox" [value]="cerveza" (change)="onCheckBoxChange($event)" />
-                {{cerveza.name}}
-            </label>
-        </div>
-        
-        
-        <small>
-            Tienes que insertar un máximo de 3 cervezas
-        </small>
-    </div>
-    
 
-        <!--********** INPUT SUBMIT ***********-->
-        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar">
-    </form>
-</div>
+            <!--********** INPUT TELEFONO CONTACTO ***********-->
+            <div class="agenda-cervecera-main__registro__form__item--telefono">
+                <label class="agenda-cervecera-main__registro__form__item--telefono__label" for="telefono">Tu teléfono:</label>
+                <input class="agenda-cervecera-main__registro__form__item--telefono__input" type="text" class="form-control" required>
+                
+                <!--********** MSG SI NO VALIDO ***********-->
+                <small class="agenda-cervecera-main__registro__form__item--telefono__small">
+                    Tienes que insertar tu número de teléfono
+                </small>
+            </div>
+
+            <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
+            <div class="agenda-cervecera-main__registro__form__item--fechaNacimiento">
+                <label class="agenda-cervecera-main__registro__form__item--fechaNacimiento__label" for="fechaNacimiento">Tu fecha de nacimiento:</label>
+                <input  class="agenda-cervecera-main__registro__form__item--fechaNacimiento__input" type="date" class="form-control" required>
+                
+                <!--********** MSG SI NO VALIDO ***********-->
+                <small class="agenda-cervecera-main__registro__form__item--fechaNacimiento__small">
+                    Tienes que insertar tu fecha de nacimiento
+                </small>
+            </div>
+
+            <!--********** INPUT SEXO CONTACTO ***********-->
+            <div class="agenda-cervecera-main__registro__form__item--sexo">
+                <label class="agenda-cervecera-main__registro__form__item--sexo__label" for="sexo">Tu sexo:</label>
+                <div class="agenda-cervecera-main__registro__form__item--sexo__container" *ngFor="let sexo of sexos; let i=index">
+                    <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" name="sexo" [value]="sexo">{{ sexo }}
+                </div>
+                
+                <!--********** MSG SI NO VALIDO ***********-->
+                <small class="agenda-cervecera-main__registro__form__item--sexo__small">
+                    Tienes que insertar tu sexo
+                </small>
+            </div>
+
+            <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
+            <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas">
+                <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" for="cervezasFavoritas">Tus cervezas favoritas:</label>
+                <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container" *ngFor="let cerveza of cervezas; let i=index">
+                    <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
+                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox" [value]="cerveza" (change)="onCheckBoxChange($event)" />
+                        {{cerveza.name}}
+                    </label>
+                </div>
+                
+                <!--********** MSG SI NO VALIDO ***********-->
+                <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label">
+                    Tienes que insertar un máximo de 3 cervezas
+                </small>
+            </div>
+
+            <!--********** INPUT SUBMIT ***********-->
+            <input class="agenda-cervecera-main__registro__form__submit"> type="submit" value="Enviar">
+        </form>
+
+        <!--********** IMAGEN DERECHA ***********-->
+        <div class="agenda-cervecera-main__containerRegistro-containerImg">
+            <img class="agenda-cervecera-main__containerRegistro-containerImg__img"
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-beer-sauna-icongeek26-linear-colour-icongeek26.png" />
+        </div>
+    </div>
+</main>
