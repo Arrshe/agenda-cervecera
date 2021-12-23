@@ -4,69 +4,71 @@
     <form class="form-agregar-cancion">
 
         <!--********** INPUT NOMBRE CONTACTO ***********-->
-        <div class="form-agregar-cancion__form-group">
+        <div>
 
             <label for="nombreContacto">Tu nombre:</label>
             <input type="text" class="form-control" required>
 
-            <small class="form-agregar-cancion__form-group__msg-error" >
-                Tienes que insertar el nombre de una canción
+            <small>
+                Tienes que insertar tu nombre (máximo 30 caracteres)
             </small>
         </div>
 
         <!--********** INPUT TELEFONO CONTACTO ***********-->
-        <div class="form-agregar-cancion__form-group">
+        <div>
 
             <label for="telefono">Tu teléfono:</label>
             <input type="text" class="form-control" required>
 
-            <small class="form-agregar-cancion__form-group__msg-error">
-                Tienes que insertar el nombre de una canción
+            <small>
+                Tienes que insertar tu número de teléfono
             </small>
         </div>
 
         <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
-        <div class="form-agregar-cancion__form-group">
+        <div>
 
             <label for="fechaNacimiento">Tu fecha de nacimiento:</label>
-            <input type="date" class="form-control"  required>
+            <input type="date" class="form-control" required>
 
-            <small class="form-agregar-cancion__form-group__msg-error" >
-                Tienes que insertar el nombre de una canción
+            <small>
+                Tienes que insertar tu fecha de nacimiento
             </small>
         </div>
 
         <!--********** INPUT SEXO CONTACTO ***********-->
-        <div class="form-agregar-cancion__form-group">
-
+        <div>
             <label for="sexo">Tu sexo:</label>
-            <select name="sexo" class="form-control" required>
-                <option value="value1">Hombre</option>
-                <option value="value2" selected>Mujer</option>
-            </select>
-            
-
-            <small class="form-agregar-cancion__form-group__msg-error" >
-                Tienes que insertar el nombre de una canción
+            <div *ngFor="let sexo of sexos; let i=index">
+                <input type="radio" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }} 
+            </div>
+         
+            <small>
+                Tienes que insertar tu sexo
             </small>
         </div>
-
-        <!--********** INPUT SEXO CONTACTO ***********-->
-        <div class="form-agregar-cancion__form-group">
-
-            <label for="cervezasFavoritas">Tus cervezas favoritas:</label>
-            <select name="sexo" class="form-control"  required>
-                <option value="value1">Hombre</option>
-                <option value="value2" selected>Mujer</option>
-            </select>
-            
-
-            <small class="form-agregar-cancion__form-group__msg-error">
-                Tienes que insertar el nombre de una canción
-            </small>
+        
+        
+        <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
+        
+    <div>
+        
+        <label for="cervezasFavoritas">Tus cervezas favoritas:</label>
+        <div *ngFor="let cerveza of cervezas; let i=index">
+            <label>
+                <input type="checkbox" [value]="cerveza" (change)="onCheckBoxChange($event)" />
+                {{cerveza.name}}
+            </label>
         </div>
+        
+        
+        <small>
+            Tienes que insertar un máximo de 3 cervezas
+        </small>
+    </div>
+    
 
         <!--********** INPUT SUBMIT ***********-->
-        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar" >
+        <input class="form-agregar-cancion__boton-submit" type="submit" value="Enviar">
     </form>
 </div>
