@@ -12,7 +12,6 @@ import { CervezasService } from 'src/app/services/cervezas.service';
 })
 export class AltaContactoComponent implements OnInit {
 
-  
   //arrayCervezasApi: any;
   
   cervezas:Cerveza[]=[]
@@ -33,14 +32,7 @@ export class AltaContactoComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCervezasApi()
-    /*
-    setTimeout(()=>{
-      console.log(this.arrayCervezasApi)
-    },1000)*/
-
-    
-
-    
+  
   }
 
   verSexo(){
