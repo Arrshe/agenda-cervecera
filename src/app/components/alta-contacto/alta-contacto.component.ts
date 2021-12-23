@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 //import { CERVEZAS } from 'src/app/mock-cervezas/mock-cervezas';
 import Cerveza from 'src/app/model/Cerveza';
 import ClaseCerveza from 'src/app/model/Cerveza';
 import { CervezasService } from 'src/app/services/cervezas.service';
+import { ContactosService } from 'src/app/services/contactos.service';
 
 @Component({
   selector: 'app-alta-contacto',
@@ -12,21 +13,19 @@ import { CervezasService } from 'src/app/services/cervezas.service';
 })
 export class AltaContactoComponent implements OnInit {
 
-  //arrayCervezasApi: any;
-  
   cervezas:Cerveza[]=[]
   cerve!:Cerveza;
   sexos:Array<string> = ['Hombre', 'Mujer']
-  //cervezas:Cerveza[]=CERVEZAS;
+  
   form:FormGroup;
 
-  constructor(private fb:FormBuilder, private cervezasService:CervezasService) {
+  constructor(private fb:FormBuilder, private cervezasService:CervezasService, private contactosService:ContactosService) {
     this.form = this.fb.group({
-      nombreContacto: [''],
-      telefono: [''],
-      fechaNacimiento: [''],
-      sexo: [''],
-      cervezasFavoritas: this.fb.array([])
+      nombreContacto: ['', Validators.required, Validators.maxLength(30)],
+      telefono: ['', Validators.required, Validators.maxLength(9), Validators.minLength(9)],
+      fechaNacimiento: ['', Validators.required],
+      sexo: ['', Validators.required],
+      cervezasFavoritas: this.fb.array(['',[Validators.required, Validators.maxLength(3)]])
     })
   }
 
@@ -35,8 +34,14 @@ export class AltaContactoComponent implements OnInit {
   
   }
 
-  verSexo(){
-    console.log(this.form)
+  onSubmit(){
+    if(this.form.valid){
+      this.contactosService.agregarContacto(this.form.value);
+      console.log('todo ok')
+      console.log(this.form.value)
+    }else{
+      console.log('no valido')
+    }
   }
 
   onCheckBoxChange(e:any){
