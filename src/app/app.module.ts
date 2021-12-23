@@ -9,11 +9,15 @@ import { AltaContactoComponent } from './components/alta-contacto/alta-contacto.
 
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AltaContactoComponent
+    AltaContactoComponent,
+    HeaderComponent,
+    ListaContactosComponent
   ],
   imports: [
     BrowserModule,
