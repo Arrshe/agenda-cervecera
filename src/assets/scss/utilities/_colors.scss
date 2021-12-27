@@ -1,23 +1,26 @@
-/****BASE****/
-$primary-bg-color:aliceblue ;
-$secondary-bg-color:#4BA67B;
-$tertiary-bg-color:#F2B544;
-$quaternary-bg-color: #ED442B;
+:root{
+    /****BASE****/
+--primary-bg-color:aliceblue ;
+--secondary-bg-color:#4BA67B;
+--tertiary-bg-color:#F2B544;
+--quaternary-bg-color: #ED442B;
 
-$primary-hover-bg-color:aliceblue;
+--primary-hover-bg-color:aliceblue;
 
 /****TEXTO****/
-$primary-text-color:aliceblue;
-$secondary-text-color:#BF9039;
-$error-text-color: #ED442B;
+--primary-text-color:#1a1919;
+--secondary-text-color:#BF9039;
+--tertiary-text-color:aliceblue;
+--error-text-color: #ED442B;
 
-$primary-hover-text-color:#4BA67B;
+--primary-hover-text-color:#4BA67B;
 
 /****SOMBRAS****/
-$primary-shadow-color:#BF9039;
+--primary-shadow-color:#BF9039;
 
 /****BORDES****/
-$primary-border-color:#BF9039;
-$secondary-border-color:#ED442B;
-$primary-hover-border-color:#4BA67B;
-$secondary-hover-border-color:#ED442B;
+--primary-border-color:#BF9039;
+--secondary-border-color:#ED442B;
+--primary-hover-border-color:#4BA67B;
+--secondary-hover-border-color:#ED442B;
+}

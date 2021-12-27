@@ -1,1 +1,13 @@
-<p>lista-contactos works!</p>
+<main class="agenda-cervecera-main">
+    <div class="agenda-cervecera-contacto" *ngFor="let contacto of contactos">
+        <h2 class="agenda-cervecera-main__lista--nombreContacto">{{contacto.nombreContacto}}</h2>
+        <p class="agenda-cervecera-main__lista--fechaNacimiento">{{contacto.fechaNacimiento}}</p>
+        <p class="agenda-cervecera-main__lista--sexo">{{contacto.sexo}}</p>
+        <p class="agenda-cervecera-main__lista--telefono">{{contacto.telefono}}</p>
+        <div class="agenda-cervecera-main__lista__container__cervezasFavoritas">
+            <div class="agenda-cervecera-main__lista__container__cervezasFavoritas__cerveza" *ngFor="let cerveza of contacto.cervezasFavoritas; let i=index">
+                <p>{{contacto.cervezasFavoritas[i]}}</p>
+            </div>
+        </div>
+    </div>
+</main>
