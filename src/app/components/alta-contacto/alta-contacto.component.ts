@@ -19,13 +19,15 @@ export class AltaContactoComponent implements OnInit {
   
   form:FormGroup;
 
+  
+
   constructor(private fb:FormBuilder, private cervezasService:CervezasService, private contactosService:ContactosService) {
     this.form = this.fb.group({
-      nombreContacto: ['', Validators.required, Validators.maxLength(30)],
-      telefono: ['', Validators.required, Validators.maxLength(9), Validators.minLength(9)],
-      fechaNacimiento: ['', Validators.required],
-      sexo: ['', Validators.required],
-      cervezasFavoritas: this.fb.array(['',[Validators.required, Validators.maxLength(3)]])
+      nombreContacto: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+      telefono: new FormControl('', [Validators.required, Validators.maxLength(9), Validators.minLength(9)]),
+      fechaNacimiento: new FormControl('', Validators.required),
+      sexo: new FormControl('', Validators.required),
+      cervezasFavoritas: this.fb.array([],[Validators.required, Validators.maxLength(3)])
     })
   }
 
@@ -37,18 +39,22 @@ export class AltaContactoComponent implements OnInit {
   onSubmit(){
     if(this.form.valid){
       this.contactosService.agregarContacto(this.form.value);
-      console.log('todo ok')
+      console.log('--registrado nuevo contacto')
       console.log(this.form.value)
     }else{
       console.log('no valido')
     }
   }
 
+  //metodo para manejar las checkboxes
   onCheckBoxChange(e:any){
     const cervezasFavoritas: FormArray = this.form.get('cervezasFavoritas') as FormArray;
-
+    
+    //seleccionadas
     if (e.target.checked){
       cervezasFavoritas.push(new FormControl(e.target.value))
+
+    //no seleccionadas
     }else{
       let i: number = 0;
       cervezasFavoritas.controls.forEach((item) => {
@@ -56,17 +62,18 @@ export class AltaContactoComponent implements OnInit {
           cervezasFavoritas.removeAt(i);
           return;
         }
-        i++
+        i++;
       });
     }
   }
 
+  //metodo para rellenar el array cervezas con la api
   getCervezasApi():void{
     this.cervezasService.getCervezasApi().subscribe(data=>
       //data es un array de objetos
       data.forEach((cerveza: any,i: any) => {
         this.cerve = new ClaseCerveza(
-          cerveza.name,cerveza.description,cerveza.image_url
+          cerveza.id,cerveza.name,cerveza.description,cerveza.image_url
         )
         this.cervezas.push(this.cerve)
         
@@ -74,6 +81,8 @@ export class AltaContactoComponent implements OnInit {
       }))
       
   }
+
+  
 
   
 
