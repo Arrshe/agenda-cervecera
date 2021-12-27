@@ -65,7 +65,7 @@
                 <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" for="cervezasFavoritas">Tus cervezas favoritas:</label>
                 <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container" formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
                     <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
-                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox"  [value]="cerveza.id" (change)="onCheckBoxChange($event)" />
+                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox"  [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </label>
                 </div>

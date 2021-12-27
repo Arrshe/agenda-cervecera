@@ -18,6 +18,7 @@ export class ContactosService {
   agregarContacto(cContacto:Contacto){
     this.contactos.push(cContacto);
     this.contactos$.next(this.contactos);
+    console.log(this.contactos)
   }
 
   getContactos$():Observable<Contacto[]>{

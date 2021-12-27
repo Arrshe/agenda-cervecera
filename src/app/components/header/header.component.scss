@@ -1,0 +1,35 @@
+.agenda-cervecera-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--tertiary-bg-color);
+    padding: var(--header-padding);
+    align-items: center;
+    justify-content: space-between;
+    .agenda-cervecera-header__titulo{
+        font-family: var(--heading-font-family);
+        font-size: var(--header-font-size);
+        color:var(--main-text-decoration)
+    }
+    .agenda-cervecera-header__nav{
+        .agenda-cervecera-header__nav-listaNav{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: var(--header-padding);
+            align-items: center;
+            justify-content: space-evenly;
+            width: 15rem;
+            .agenda-cervecera-header__nav-listaNav--registro__enlace,
+            .agenda-cervecera-header__nav-listaNav--lista__enlace
+            {
+                background-color: var(--primary-bg-color);
+                text-decoration: var(--main-text-decoration);
+                padding: var(--header-padding);
+                border-radius: 1rem;
+                color: var(--primary-text-color)
+            }
+        }
+    }
+    
+}

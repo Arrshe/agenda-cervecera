@@ -47,18 +47,19 @@ export class AltaContactoComponent implements OnInit {
   }
 
   //metodo para manejar las checkboxes
-  onCheckBoxChange(e:any){
+  onCheckBoxChange(e:Event){
     const cervezasFavoritas: FormArray = this.form.get('cervezasFavoritas') as FormArray;
     
     //seleccionadas
-    if (e.target.checked){
-      cervezasFavoritas.push(new FormControl(e.target.value))
+    if ((e.target as HTMLInputElement).checked){
+      cervezasFavoritas.push(new FormControl((e.target as HTMLInputElement).value))
+      console.log("a ver que eres" + JSON.stringify((e.target as HTMLInputElement).value))
 
     //no seleccionadas
     }else{
       let i: number = 0;
       cervezasFavoritas.controls.forEach((item) => {
-        if(item.value == e.target.value){
+        if(item.value == (e.target as HTMLInputElement).value){
           cervezasFavoritas.removeAt(i);
           return;
         }
