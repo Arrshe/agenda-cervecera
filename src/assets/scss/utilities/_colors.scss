@@ -2,19 +2,22 @@
 $primary-bg-color:aliceblue ;
 $secondary-bg-color:#4BA67B;
 $tertiary-bg-color:#F2B544;
+$quaternary-bg-color: #ED442B;
 
 $primary-hover-bg-color:aliceblue;
 
 /****TEXTO****/
 $primary-text-color:aliceblue;
 $secondary-text-color:#BF9039;
-$error-text-color: red;
+$error-text-color: #ED442B;
 
-$primary-hover-text-color:#2D4B73;
+$primary-hover-text-color:#4BA67B;
 
 /****SOMBRAS****/
 $primary-shadow-color:#BF9039;
 
 /****BORDES****/
 $primary-border-color:#BF9039;
-$primary-hover-border-color:#2D4B73;
+$secondary-border-color:#ED442B;
+$primary-hover-border-color:#4BA67B;
+$secondary-hover-border-color:#ED442B;
