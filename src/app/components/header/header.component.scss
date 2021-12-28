@@ -1,11 +1,11 @@
+@import '../../../assets/scss/utilities/mixins';
+
 .agenda-cervecera-header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include display-row;
     background-color: var(--tertiary-bg-color);
-    padding: var(--header-padding);
-    align-items: center;
-    justify-content: space-between;
+    padding: var(--basic-padding);
+    align-items: var(--header-align);
+    justify-content: var(--header-space);
     .agenda-cervecera-header__titulo{
         font-family: var(--heading-font-family);
         font-size: var(--header-font-size);
@@ -13,21 +13,19 @@
     }
     .agenda-cervecera-header__nav{
         .agenda-cervecera-header__nav-listaNav{
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: var(--header-padding);
-            align-items: center;
-            justify-content: space-evenly;
-            width: 15rem;
+            @include display-row;
+            padding: var(--basic-padding);
+            align-items: var(--nav-align);
+            justify-content: var(--nav-space);
+            width: var(--nav-width);
             .agenda-cervecera-header__nav-listaNav--registro__enlace,
             .agenda-cervecera-header__nav-listaNav--lista__enlace
             {
-                background-color: var(--primary-bg-color);
-                text-decoration: var(--main-text-decoration);
-                padding: var(--header-padding);
-                border-radius: 1rem;
-                color: var(--primary-text-color)
+                @include nav-button;
+
+                &:hover{
+                    @include nav-button-hover;
+                }
             }
         }
     }
