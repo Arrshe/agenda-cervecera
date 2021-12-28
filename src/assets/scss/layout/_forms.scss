@@ -7,16 +7,19 @@
     --form-small-font-size:13px;
     --form-text-font-size:var(--base-font-size);
     --form-font-weight:var(--base-font-weight);
+
     /****FORM TEXT COLOR****/
     --form-title-color:var(--secondary-text-color);
     --form-label-color:var(--secondary-text-color);
     --form-input-color:var(--primary-text-color);
     --form-error-color:var(--error-text-color);
+
     /****FORM TEXT PADDING****/
     --form-text-align:var(--basic-text-align);
+    
     /****FORM TEXT PADDING****/
     --form-text-padding:0.3rem 0rem;
 
     /****FORM LAYOUT****/
-    --form-padding:1rem 4rem;
+    --form-padding:1rem 6rem;
 }

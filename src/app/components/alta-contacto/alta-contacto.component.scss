@@ -8,6 +8,9 @@
         background-color: var(--secondary-bg-color);
         padding: var(--basic-padding);
         border-radius: var(--border-radius);
+        align-items: center;
+        justify-content: space-between;
+        width: 50rem;
         margin: auto;
         .agenda-cervecera-main__registro__form{
             background-color: var(--primary-bg-color);
@@ -89,6 +92,12 @@
                     @include cancel-button-hover;
                 }
             }
+        }
+        .agenda-cervecera-main__containerRegistro-containerImg{
+            margin-right: 6rem;
+            background-color: var(--primary-bg-color);
+            border-radius: 5rem;
+            padding: 3rem;
         }
     }
 }
