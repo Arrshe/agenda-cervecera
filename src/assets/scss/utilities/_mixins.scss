@@ -1,0 +1,32 @@
+/****LAYOUT****/
+@mixin display-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/****COMPONENTS****/
+
+    /****BUTTONS****/
+@mixin basic-button{
+    padding: var(--header-padding);
+    border-radius: var(--border-radius);
+}
+
+@mixin link-button{
+    @include basic-button;
+    text-decoration: var(--main-text-decoration);
+}
+
+@mixin nav-button{
+    @include link-button;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+}
+
+@mixin nav-button-hover{
+    @include link-button;
+    background-color: var(--secondary-bg-color);
+    color: var(--tertiary-text-color);
+    transition: var(--button-transition);
+}
