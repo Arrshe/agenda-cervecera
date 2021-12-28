@@ -12,10 +12,10 @@
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--nombreContacto__small" *ngIf="form.get('nombreContacto')?.errors?.['required']">
-                    Tienes que insertar tu nombre 
+                    *Tienes que insertar tu nombre 
                 </small>
             <small class="agenda-cervecera-main__registro__form__item--nombreContacto__small" *ngIf="form.get('nombreContacto')?.errors?.['maxlength']">
-                    El máximo permitido de caracteres es 30
+                    *El máximo permitido de caracteres es 30
                 </small>
             </div>
 
@@ -26,13 +26,13 @@
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--telefono__small" *ngIf="form.get('telefono')?.errors?.['required']">
-                    Tienes que insertar tu número de teléfono
+                    *Tienes que insertar tu número de teléfono
                 </small>
                 <small class="agenda-cervecera-main__registro__form__item--telefono__small" *ngIf="form.get('telefono')?.errors?.['minlength']">
-                    Tienen que ser mínimo 9 números
+                    *Tienen que ser mínimo 9 números
                 </small>
                 <small class="agenda-cervecera-main__registro__form__item--telefono__small" *ngIf="form.get('telefono')?.errors?.['maxlength']">
-                    Tienen que ser máximo 9 números
+                    *Tienen que ser máximo 9 números
                 </small>
             </div>
 
@@ -43,7 +43,7 @@
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--fechaNacimiento__small" *ngIf="form.get('fechaNacimiento')?.errors?.['required']">
-                    Tienes que insertar tu fecha de nacimiento
+                    *Tienes que insertar tu fecha de nacimiento
                 </small>
             </div>
 
@@ -58,7 +58,7 @@
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--sexo__small" *ngIf="form.get('sexo')?.errors?.['required']">
-                    Tienes que insertar tu sexo
+                    *Tienes que insertar tu sexo
                 </small>
             </div>
 
@@ -74,10 +74,10 @@
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__small" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']">
-                    Tienes que elegir al menos una cerveza
+                    *Tienes que elegir al menos una cerveza
                 </small>
                 <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__small" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']">
-                    Tienes que insertar un máximo de 3 cervezas
+                    *Tienes que insertar un máximo de 3 cervezas
                 </small>
 
                 
