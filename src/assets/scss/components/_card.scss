@@ -1,0 +1,12 @@
+:root{
+    /****LAYOUT****/
+    --card-padding:1rem;
+    --card-border-radius:var(--border-radius);
+    --card-bg-color:var(--secondary-bg-color);
+    /****FONTS****/
+    --card-font-family:var(--body-font-family);
+    --card-title-size:20px;
+    --card-text-size:var(--base-font-size);
+    --card-font-weight:var(--base-font-weight);
+    --card-font-color:var(--tertiary-text-color);
+}

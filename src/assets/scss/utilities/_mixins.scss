@@ -16,6 +16,15 @@
     border-radius: var(--border-radius);
 }
 
+/****FONTS****/
+@mixin basic-font{
+    font-family: var(--body-font-family);
+    font-size: var(--base-font-size);
+    font-weight: var(--base-font-weight);
+    color:var(--tertiary-text-color);
+    padding: var(--basic-text-padding);
+}
+
 /****COMPONENTS****/
 
     /****BUTTONS****/
@@ -39,7 +48,6 @@
 }
 
 @mixin nav-button-hover{
-    @include link-button;
     background-color: var(--secondary-bg-color);
     color: var(--tertiary-text-color);
     transition: var(--button-transition);
@@ -54,12 +62,16 @@
 }
 
 @mixin submit-button-hover{
-    @include basic-button;
-    @include basic-border;
     background-color: var(--primary-hover-bg-color);
     color: var(--primary-hover-text-color);
     border-color:var(--primary-hover-border-color);
     transition: var(--button-transition);  
+}
+
+@mixin submit-button-disabled{
+    background-color: var(--button-bg-disabled);
+    color: var(--button-text-disabled);
+    border-color:var(--disabled-border-color); 
 }
 
 @mixin cancel-button{
@@ -70,8 +82,6 @@
 }
 
 @mixin cancel-button-hover{
-    @include link-button;
-    @include basic-border;
     background-color: var(--primary-bg-color);
     color: var(--error-text-color);
     border-color:var(--secondary-hover-border-color);
@@ -86,7 +96,6 @@
 }
 
 @mixin footer-button-hover{
-    @include link-button;
     background-color: var(--secondary-bg-color);
     color: var(--tertiary-text-color);
     padding: 0.5rem;
@@ -128,4 +137,13 @@
     font-weight: var(--form-font-weight);
     color:var(--form-error-color);
     padding:var(--form-text-padding);
+}
+
+    /****CARDS****/
+@mixin card-contacto{
+    @include display-column;
+    padding: var(--card-padding);
+    margin: 0rem 1rem 1rem 1rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--card-border-radius);
 }

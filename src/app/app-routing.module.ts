@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AltaContactoComponent } from './components/alta-contacto/alta-contacto.component';
 import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 const routes: Routes = [
-  {path:'registro', component:AltaContactoComponent},
+  {path:'registro', component:RegistroComponent},
   {path:'lista', component:ListaContactosComponent}
 ];
 

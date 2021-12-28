@@ -1,0 +1,10 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-main{
+    display:var(--basic-display);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:var(--main-padding);
+}
