@@ -1,0 +1,20 @@
+.agenda-cervecera-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--footer-bg-color);
+    padding: var(--footer-padding);
+    .agenda-cervecera-footer__copyright{
+        font-family: var(--footer-font-family);
+        font-size: var(--footer-font-size);
+        font-weight: var(--footer-font-weight);
+        .agenda-cervecera-footer__copyright__link{
+            text-decoration: var(--footer-link-text-decoration);
+            background-color: var(--primary-bg-color);
+            border-radius: 1rem;
+            padding: 0.5rem;
+            font-weight: 700;
+            color: var(--quaternary-bg-color);
+        }
+    }
+}

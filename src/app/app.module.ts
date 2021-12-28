@@ -11,13 +11,15 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { ListaContactosComponent } from './components/lista-contactos/lista-contactos.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AltaContactoComponent,
     HeaderComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
