@@ -22,6 +22,9 @@
 @mixin basic-button{
     padding: var(--header-padding);
     border-radius: var(--border-radius);
+    font-family: var(--body-font-family);
+    font-size: var(--base-font-size);
+    font-weight: var(--base-font-weight);
 }
 
 @mixin link-button{
@@ -55,7 +58,24 @@
     @include basic-border;
     background-color: var(--primary-hover-bg-color);
     color: var(--primary-hover-text-color);
-    border-color:var(--primary-hover-border-color);    
+    border-color:var(--primary-hover-border-color);
+    transition: var(--button-transition);  
+}
+
+@mixin cancel-button{
+    @include link-button;
+    background-color: var(--quaternary-bg-color);
+    color: var(--tertiary-text-color);
+    border-color:var(--quaternary-bg-color);
+}
+
+@mixin cancel-button-hover{
+    @include link-button;
+    @include basic-border;
+    background-color: var(--primary-bg-color);
+    color: var(--quaternary-bg-color);
+    border-color:var(--quaternary-bg-color);
+    transition: var(--button-transition);
 }
     /****FORMS****/
 @mixin form-title{
@@ -65,4 +85,31 @@
     color: var(--form-title-color);
     text-align: var(--form-text-align);
     padding: var(--form-text-padding);
+}
+
+@mixin form-label{
+    font-family: var(--form-text-font-family);
+    font-size: var(--form-label-font-size);
+    font-weight: var(--form-font-weight);
+    color: var(--form-label-color);
+    padding:var(--form-text-padding);
+}
+
+@mixin form-input{
+    font-family: var(--form-text-font-family);
+    font-size: var(--form-text-font-size);
+    font-weight: var(--form-font-weight);
+    color:var(--form-input-color);
+}
+
+@mixin form-input-label{
+    @include form-input;
+}
+
+@mixin form-small{
+    font-family: var(--form-text-font-family);
+    font-size: var(--form-small-font-size);
+    font-weight: var(--form-font-weight);
+    color:var(--form-error-color);
+    padding:var(--form-text-padding);
 }

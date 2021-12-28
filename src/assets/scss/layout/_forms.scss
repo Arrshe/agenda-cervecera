@@ -3,6 +3,8 @@
     --form-text-font-family:var(--body-font-family);
     --form-title-font-family:var(--title-font-family);
     --form-title-font-size:var(--title-font-size);
+    --form-label-font-size:16px;
+    --form-small-font-size:13px;
     --form-text-font-size:var(--base-font-size);
     --form-font-weight:var(--base-font-weight);
     /****FORM TEXT COLOR****/
@@ -13,8 +15,8 @@
     /****FORM TEXT PADDING****/
     --form-text-align:var(--basic-text-align);
     /****FORM TEXT PADDING****/
-    --form-text-padding:var(--basic-text-padding);
+    --form-text-padding:0.3rem 0rem;
 
     /****FORM LAYOUT****/
-    --form-padding:2rem 4rem;
+    --form-padding:1rem 4rem;
 }

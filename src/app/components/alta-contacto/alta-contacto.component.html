@@ -8,7 +8,7 @@
             <!--********** INPUT NOMBRE CONTACTO ***********-->
             <div class="agenda-cervecera-main__registro__form__item--nombreContacto">
                 <label class="agenda-cervecera-main__registro__form__item--nombreContacto__label" for="nombreContacto">Tu nombre:</label>
-                <input class="agenda-cervecera-main__registro__form__item--nombreContacto__input" type="text" formControlName="nombreContacto" required>
+                <input class="agenda-cervecera-main__registro__form__item--nombreContacto__input" id="nombreContacto" type="text" formControlName="nombreContacto" required>
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--nombreContacto__small" *ngIf="form.get('nombreContacto')?.errors?.['required']">
@@ -22,7 +22,7 @@
             <!--********** INPUT TELEFONO CONTACTO ***********-->
             <div class="agenda-cervecera-main__registro__form__item--telefono">
                 <label class="agenda-cervecera-main__registro__form__item--telefono__label" for="telefono">Tu teléfono:</label>
-                <input class="agenda-cervecera-main__registro__form__item--telefono__input" type="text"  formControlName="telefono" required>
+                <input class="agenda-cervecera-main__registro__form__item--telefono__input" id="telefono" type="text"  formControlName="telefono" required>
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--telefono__small" *ngIf="form.get('telefono')?.errors?.['required']">
@@ -39,7 +39,7 @@
             <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
             <div class="agenda-cervecera-main__registro__form__item--fechaNacimiento">
                 <label class="agenda-cervecera-main__registro__form__item--fechaNacimiento__label" for="fechaNacimiento">Tu fecha de nacimiento:</label>
-                <input  class="agenda-cervecera-main__registro__form__item--fechaNacimiento__input" type="date" formControlName="fechaNacimiento" required>
+                <input  class="agenda-cervecera-main__registro__form__item--fechaNacimiento__input" id="fechaNacimiento" type="date" formControlName="fechaNacimiento" required>
                 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-main__registro__form__item--fechaNacimiento__small" *ngIf="form.get('fechaNacimiento')?.errors?.['required']">
@@ -51,7 +51,9 @@
             <div class="agenda-cervecera-main__registro__form__item--sexo">
                 <label class="agenda-cervecera-main__registro__form__item--sexo__label" for="sexo">Tu sexo:</label>
                 <div class="agenda-cervecera-main__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
-                    <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
+                    <label for="sexoItem" class="agenda-cervecera-main__registro__form__item--sexo__container__label">
+                        <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
+                    </label>
                 </div>
                 
                 <!--********** MSG SI NO VALIDO ***********-->
@@ -64,17 +66,17 @@
             <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas">
                 <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" for="cervezasFavoritas">Tus cervezas favoritas:</label>
                 <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container" formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
-                    <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
+                    <label for="cervezaItem" class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
                         <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox"  [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </label>
                 </div>
                 
                 <!--********** MSG SI NO VALIDO ***********-->
-                <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']">
+                <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__small" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']">
                     Tienes que elegir al menos una cerveza
                 </small>
-                <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']">
+                <small class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__small" *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']">
                     Tienes que insertar un máximo de 3 cervezas
                 </small>
 
@@ -83,6 +85,7 @@
 
             <!--********** INPUT SUBMIT ***********-->
             <input class="agenda-cervecera-main__registro__form__submit" type="submit" value="Enviar" [disabled]="form.invalid">
+            <a routerLink="../lista" class="agenda-cervecera-main__registro__form__cancel">Cancelar</a>
         </form>
 
         <!--********** IMAGEN DERECHA ***********-->
