@@ -5,5 +5,5 @@ export default interface Contacto {
     telefono:string;
     fechaNacimiento:string;
     sexo:string;
-    cervezasFavoritas:Array<Cerveza>
+    cervezasFavoritas:Cerveza[];
 }

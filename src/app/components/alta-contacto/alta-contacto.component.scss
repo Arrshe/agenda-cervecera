@@ -1,6 +1,6 @@
 @import '../../../assets/scss/utilities/mixins';
 
-.agenda-cervecera-main{
+.agenda-cervecera-section{
     display:var(--basic-display);
     padding:var(--main-padding);
     .agenda-cervecera-main__registro{
@@ -83,6 +83,9 @@
                 @include submit-button;
                 &:hover{
                     @include submit-button-hover;
+                }
+                &:disabled{
+                    @include submit-button-disabled;
                 }
             }
             .agenda-cervecera-main__registro__form__cancel{

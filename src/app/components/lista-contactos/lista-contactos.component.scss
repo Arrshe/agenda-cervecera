@@ -1,0 +1,32 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-section{
+    display:var(--basic-display);
+    flex-wrap: wrap;
+    max-width: 35rem;
+    padding:var(--main-padding);
+    margin: auto;
+    .agenda-cervecera-contacto{
+        @include display-column;
+        @include card-contacto;
+        .agenda-cervecera-main__lista--nombreContacto{
+            @include basic-font;
+            font-size:var(--card-title-size);
+        }
+        .agenda-cervecera-main__lista--fechaNacimiento,
+        .agenda-cervecera-main__lista--sexo,
+        .agenda-cervecera-main__lista--telefono,
+        .agenda-cervecera-main__lista--cervezasFavoritas{
+            @include basic-font;
+        }
+        .agenda-cervecera-main__lista__container__cervezasFavoritas{
+            background-color: var(--primary-bg-color);
+            padding: var(--basic-padding);
+            border-radius: var(--border-radius);
+            .agenda-cervecera-main__lista__container__cervezasFavoritas__cerveza{
+                @include basic-font;
+                color: var(--primary-text-color);
+            }
+        }
+    }
+}
