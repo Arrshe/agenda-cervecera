@@ -3,19 +3,27 @@
 
 :root{
 /****FONT-FAMILY****/
---heading-font-family:'Alfa Slab One', cursive;
+--title-font-family:'Alfa Slab One', cursive;
 --body-font-family:'Basic', sans-serif;
 
 /****FONT-SIZE****/
 --header-font-size: 50px;
+--title-font-size: 30px;
 --base-font-size: 18px;
 
 /****FONT-WEIGHT****/
 --base-font-weight: 400;
 
 /****TEXT DECORATION****/
---main-text-decoration:none;
+--basic-text-decoration:none;
+
+/****TEXT ALIGN****/
+--basic-text-align:center;
+
+/****TEXT PADDING****/
+--basic-text-padding:0rem 0rem 1rem 0rem;
 }
+
 
 
 
