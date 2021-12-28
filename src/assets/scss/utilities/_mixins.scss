@@ -66,18 +66,31 @@
     @include link-button;
     background-color: var(--quaternary-bg-color);
     color: var(--tertiary-text-color);
-    border-color:var(--quaternary-bg-color);
+    border-color:var(--secondary-border-color);
 }
 
 @mixin cancel-button-hover{
     @include link-button;
     @include basic-border;
     background-color: var(--primary-bg-color);
-    color: var(--quaternary-bg-color);
-    border-color:var(--quaternary-bg-color);
+    color: var(--error-text-color);
+    border-color:var(--secondary-hover-border-color);
     transition: var(--button-transition);
 }
 
+@mixin footer-button{
+    @include link-button;
+    background-color: var(--primary-bg-color);
+    color: var(--quaternary-text-color);
+    padding: 0.5rem;
+}
+
+@mixin footer-button-hover{
+    @include link-button;
+    background-color: var(--secondary-bg-color);
+    color: var(--tertiary-text-color);
+    padding: 0.5rem;
+}
 
     /****FORMS****/
     
