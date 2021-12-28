@@ -5,6 +5,17 @@
     flex-wrap: wrap;
 }
 
+@mixin display-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin basic-border{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: var(--border-radius);
+}
+
 /****COMPONENTS****/
 
     /****BUTTONS****/
@@ -15,7 +26,7 @@
 
 @mixin link-button{
     @include basic-button;
-    text-decoration: var(--main-text-decoration);
+    text-decoration: var(--basic-text-decoration);
 }
 
 @mixin nav-button{
@@ -29,4 +40,29 @@
     background-color: var(--secondary-bg-color);
     color: var(--tertiary-text-color);
     transition: var(--button-transition);
+}
+
+@mixin submit-button{
+    @include basic-button;
+    @include basic-border;
+    background-color: var(--secondary-bg-color);
+    color: var(--tertiary-text-color);
+    border-color:var(--primary-border-color);
+}
+
+@mixin submit-button-hover{
+    @include basic-button;
+    @include basic-border;
+    background-color: var(--primary-hover-bg-color);
+    color: var(--primary-hover-text-color);
+    border-color:var(--primary-hover-border-color);    
+}
+    /****FORMS****/
+@mixin form-title{
+    font-family: var(--form-title-font-family);
+    font-size: var(--form-title-font-size);
+    font-weight: var(--form-font-weight);
+    color: var(--form-title-color);
+    text-align: var(--form-text-align);
+    padding: var(--form-text-padding);
 }

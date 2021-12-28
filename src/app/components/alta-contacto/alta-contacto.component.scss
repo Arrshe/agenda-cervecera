@@ -1,0 +1,28 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-main{
+    display:var(--basic-display);
+    padding:var(--main-padding);
+    .agenda-cervecera-main__registro{
+        @include display-row;
+        background-color: var(--secondary-bg-color);
+        padding: var(--basic-padding);
+        border-radius: var(--border-radius);
+        margin: auto;
+        .agenda-cervecera-main__registro__form{
+            background-color: var(--primary-bg-color);
+            padding: var(--form-padding);
+            border-radius: var(--border-radius);
+            .agenda-cervecera-main__registro__form__titulo{
+                @include form-title;
+            }
+            .agenda-cervecera-main__registro__form__item--nombreContacto,
+            .agenda-cervecera-main__registro__form__item--telefono,
+            .agenda-cervecera-main__registro__form__item--fechaNacimiento,
+            .agenda-cervecera-main__registro__form__item--sexo,
+            .agenda-cervecera-main__registro__form__item--cervezasFavoritas{
+                @include display-column;
+            }
+        }
+    }
+}
