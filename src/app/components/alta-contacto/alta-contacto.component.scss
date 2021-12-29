@@ -104,19 +104,10 @@
             }
             &__submit{
                 @include submit-button;
-                &:hover{
-                    @include submit-button-hover;
-                }
-                &:disabled{
-                    @include submit-button-disabled;
-                }
             }
             &__cancel{
                 @include cancel-button;
                 margin-left:1rem;
-                &:hover{
-                    @include cancel-button-hover;
-                }
             }
         }
         &__containerRegistro-containerImg{

@@ -71,12 +71,12 @@
         @include link-button;
         background-color: var(--primary-bg-color);
         color: var(--primary-text-color);
-    }
 
-    @mixin nav-button-hover{
-        background-color: var(--secondary-bg-color);
-        color: var(--tertiary-text-color);
-        transition: var(--button-transition);
+        &:hover{
+            background-color: var(--secondary-bg-color);
+            color: var(--tertiary-text-color);
+            transition: var(--button-transition);
+        }
     }
 
     @mixin submit-button{
@@ -85,33 +85,34 @@
         background-color: var(--secondary-bg-color);
         color: var(--tertiary-text-color);
         border-color:var(--primary-border-color);
-    }
 
-    @mixin submit-button-hover{
-        background-color: var(--primary-hover-bg-color);
-        color: var(--primary-hover-text-color);
-        border-color:var(--primary-hover-border-color);
-        transition: var(--button-transition);  
-    }
+        &:hover{
+            background-color: var(--primary-hover-bg-color);
+            color: var(--primary-hover-text-color);
+            border-color:var(--primary-hover-border-color);
+            transition: var(--button-transition); 
+        }
 
-    @mixin submit-button-disabled{
-        background-color: var(--button-bg-disabled);
-        color: var(--button-text-disabled);
-        border-color:var(--disabled-border-color); 
+        &:disabled{
+            background-color: var(--button-bg-disabled);
+            color: var(--button-text-disabled);
+            border-color:var(--disabled-border-color); 
+        }
     }
 
     @mixin cancel-button{
         @include link-button;
+        @include basic-border;
         background-color: var(--quaternary-bg-color);
         color: var(--tertiary-text-color);
         border-color:var(--secondary-border-color);
-    }
 
-    @mixin cancel-button-hover{
-        background-color: var(--primary-bg-color);
-        color: var(--error-text-color);
-        border-color:var(--secondary-hover-border-color);
-        transition: var(--button-transition);
+        &:hover{
+            background-color: var(--primary-bg-color);
+            color: var(--error-text-color);
+            border-color:var(--secondary-hover-border-color);
+            transition: var(--button-transition);
+        }
     }
 
     @mixin footer-button{
@@ -119,13 +120,14 @@
         background-color: var(--primary-bg-color);
         color: var(--quaternary-text-color);
         padding: 0.5rem;
+
+        &:hover{
+            background-color: var(--secondary-bg-color);
+            color: var(--tertiary-text-color);
+            padding: 0.5rem;
+        }
     }
 
-    @mixin footer-button-hover{
-        background-color: var(--secondary-bg-color);
-        color: var(--tertiary-text-color);
-        padding: 0.5rem;
-    }
 
     /****FORMS****/
     
