@@ -29,10 +29,6 @@
             &--lista__enlace
             {
                 @include nav-button;
-
-                &:hover{
-                    @include nav-button-hover;
-                }
             }
         }
     }

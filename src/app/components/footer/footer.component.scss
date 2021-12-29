@@ -14,9 +14,6 @@
         line-height: 2rem;
         &__link{
             @include footer-button;
-            &:hover{
-                @include footer-button-hover;
-            }
         }
     }
 }
