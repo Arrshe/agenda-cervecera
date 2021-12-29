@@ -17,5 +17,8 @@ export default class ClaseCerveza{
         this.description=description;
         this.image_url=image_url;
     }
+    toString(){
+        return this.id && this.name && this.description && this.image_url;
+    }
 }
 
