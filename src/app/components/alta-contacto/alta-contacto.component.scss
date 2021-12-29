@@ -6,7 +6,7 @@
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    .agenda-cervecera-section__registro{
+    &__registro{
         @include display-row;
         background-color: var(--secondary-bg-color);
         padding: var(--basic-padding);
@@ -19,7 +19,7 @@
             @include display-column;
             width: auto;
         }
-        .agenda-cervecera-section__registro__form{
+        &__form{
             background-color: var(--primary-bg-color);
             padding: var(--form-padding);
             border-radius: var(--border-radius);
@@ -27,82 +27,82 @@
                 width: 70vw;
                 padding: 1rem;
             }
-            .agenda-cervecera-section__registro__form__titulo{
+            &__titulo{
                 @include form-title;
             }
-            .agenda-cervecera-section__registro__form__item--nombreContacto{
+            &__item--nombreContacto{
                 @include display-column;
-                .agenda-cervecera-section__registro__form__item--nombreContacto__label{
+                &__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--nombreContacto__input{
+                &__input{
                     @include form-input;
                 }
-                .agenda-cervecera-section__registro__form__item--nombreContacto__small{
+                &__small{
                     @include form-small;
                 }
             }
-            .agenda-cervecera-section__registro__form__item--telefono{
+            &__item--telefono{
                 @include display-column;
-                .agenda-cervecera-section__registro__form__item--telefono__label{
+                &__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--telefono__input{
+                &__input{
                     @include form-input;
                 }
-                .agenda-cervecera-section__registro__form__item--telefono__small{
+                &__small{
                     @include form-small;
                 }
             }
-            .agenda-cervecera-section__registro__form__item--fechaNacimiento{
+            &__item--fechaNacimiento{
                 @include display-column;
-                .agenda-cervecera-section__registro__form__item--fechaNacimiento__label{
+                &__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--fechaNacimiento__input{
+                &__input{
                     @include form-input;
                 }
-                .agenda-cervecera-section__registro__form__item--fechaNacimiento__small{
+                &__small{
                     @include form-small;
                 }
             }
-            .agenda-cervecera-section__registro__form__item--sexo{
+            &__item--sexo{
                 @include display-column;
 
-                .agenda-cervecera-section__registro__form__item--sexo__label{
+                &__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--sexo__radiogroup{
+                &__radiogroup{
                     @include display-column;
                     
-                    .agenda-cervecera-section__registro__form__item--sexo__radiogroup__container{
+                    &__container{
                         @include form-input-text;
                     }
                 }
-                .agenda-cervecera-section__registro__form__item--sexo__small{
+                &__small{
                     @include form-small;
                 }
             }
             
             
-            .agenda-cervecera-section__registro__form__item--cervezasFavoritas{
+            &__item--cervezasFavoritas{
                 @include display-column;
-                .agenda-cervecera-section__registro__form__item--cervezasFavoritas__label{
+                &__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox{
+                &__checkbox{
                     @include display-column;
 
-                    .agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox__container{
+                    &__container{
                         @include form-input-text;
                     }
                 }
                 
-                .agenda-cervecera-section__registro__form__item--cervezasFavoritas__small{
+                &__small{
                     @include form-small;
                 }
             }
-            .agenda-cervecera-section__registro__form__submit{
+            &__submit{
                 @include submit-button;
                 &:hover{
                     @include submit-button-hover;
@@ -111,7 +111,7 @@
                     @include submit-button-disabled;
                 }
             }
-            .agenda-cervecera-section__registro__form__cancel{
+            &__cancel{
                 @include cancel-button;
                 margin-left:1rem;
                 &:hover{
@@ -119,7 +119,7 @@
                 }
             }
         }
-        .agenda-cervecera-section__containerRegistro-containerImg{
+        &__containerRegistro-containerImg{
             margin-right: 2.8rem;
             background-color: var(--primary-bg-color);
             border-radius: 5rem;

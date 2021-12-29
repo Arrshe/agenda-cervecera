@@ -8,26 +8,26 @@
     max-width: 50rem;
     padding:var(--main-padding);
     margin: 0 auto;
-    .agenda-cervecera-section__contacto{
+    &__contacto{
         @include display-column;
         @include card-contacto;
         animation: fadein 1s;
-        .agenda-cervecera-section__lista--nombreContacto{
+        &__lista--nombreContacto{
             @include basic-font;
             font-size:var(--card-title-size);
         }
-        .agenda-cervecera-section__lista--fechaNacimiento,
-        .agenda-cervecera-section__lista--sexo,
-        .agenda-cervecera-section__lista--telefono,
-        .agenda-cervecera-section__lista--cervezasFavoritas{
+        &__lista--fechaNacimiento,
+        &__lista--sexo,
+        &__lista--telefono,
+        &__lista--cervezasFavoritas{
             @include basic-font;
         }
-        .agenda-cervecera-section__lista__container__cervezasFavoritas__lista{
+        &__lista__container__cervezasFavoritas__lista{
             background-color: var(--primary-bg-color);
             padding: var(--basic-padding);
             border-radius: var(--border-radius);
             height: 8.5rem;
-            .agenda-cervecera-section__lista__container__cervezasFavoritas__lista__cerveza{
+            &__cerveza{
                 @include basic-font;
                 color: var(--primary-text-color);
             }
