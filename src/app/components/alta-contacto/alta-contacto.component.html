@@ -52,7 +52,7 @@
                 <label class="agenda-cervecera-main__registro__form__item--sexo__label" for="sexo">Tu sexo:</label>
                 <div class="agenda-cervecera-main__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
                     <label for="sexoItem" class="agenda-cervecera-main__registro__form__item--sexo__container__label">
-                        <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
+                        <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" aria-label="opción sexo" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
                     </label>
                 </div>
                 
@@ -67,7 +67,7 @@
                 <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" for="cervezasFavoritas">Tus cervezas favoritas:</label>
                 <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container" formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
                     <label for="cervezaItem" class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
-                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox"  [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
+                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </label>
                 </div>
@@ -84,7 +84,7 @@
             </div>
 
             <!--********** INPUT SUBMIT ***********-->
-            <input class="agenda-cervecera-main__registro__form__submit" type="submit" value="Enviar" [disabled]="form.invalid">
+            <input class="agenda-cervecera-main__registro__form__submit" aria-label="enviar formulario" type="submit" value="Enviar" [disabled]="form.invalid">
             <a routerLink="../lista" class="agenda-cervecera-main__registro__form__cancel">Cancelar</a>
         </form>
 
