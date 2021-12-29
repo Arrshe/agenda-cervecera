@@ -52,7 +52,7 @@
                 <label class="agenda-cervecera-main__registro__form__item--sexo__label" for="sexo">Tu sexo:</label>
                 <div class="agenda-cervecera-main__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
                     <label for="sexoItem" class="agenda-cervecera-main__registro__form__item--sexo__container__label">
-                        <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" aria-label="opción sexo" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
+                        <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio" id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo" [value]="sexo">{{ sexo }}
                     </label>
                 </div>
                 
@@ -67,7 +67,7 @@
                 <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label" for="cervezasFavoritas">Tus cervezas favoritas:</label>
                 <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container" formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
                     <label for="cervezaItem" class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label">
-                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
+                        <input class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container__label__input" id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name" (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </label>
                 </div>
@@ -91,7 +91,9 @@
         <!--********** IMAGEN DERECHA ***********-->
         <div class="agenda-cervecera-main__containerRegistro-containerImg">
             <img class="agenda-cervecera-main__containerRegistro-containerImg__img"
-                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-beer-sauna-icongeek26-linear-colour-icongeek26.png" />
+                src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-beer-sauna-icongeek26-linear-colour-icongeek26.png"
+                alt="dibujo jarra de cerveza"
+                />
         </div>
     </div>
 </section>
