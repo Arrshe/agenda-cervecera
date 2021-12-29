@@ -25,6 +25,7 @@
             background-color: var(--primary-bg-color);
             padding: var(--basic-padding);
             border-radius: var(--border-radius);
+            height: 10rem;
             .agenda-cervecera-main__lista__container__cervezasFavoritas__cerveza{
                 @include basic-font;
                 color: var(--primary-text-color);
