@@ -15,10 +15,10 @@ export class ContactosService {
     this.contactos$ = new Subject();
   }
 
-  agregarContacto(cContacto:Contacto){
+  agregarContacto(cContacto:Contacto):void{
     this.contactos.push(cContacto);
     this.contactos$.next(this.contactos);
-    console.log(this.contactos)
+    console.log(this.contactos);
   }
 
   getContactos$():Observable<Contacto[]>{

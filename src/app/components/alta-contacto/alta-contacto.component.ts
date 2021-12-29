@@ -15,11 +15,9 @@ export class AltaContactoComponent implements OnInit {
 
   cervezas:Cerveza[]=[]
   cerve!:Cerveza;
-  sexos:Array<string> = ['Hombre', 'Mujer']
+  sexos:Array<string> = ['Hombre', 'Mujer'];
   
   form:FormGroup;
-
-  
 
   constructor(private fb:FormBuilder, private cervezasService:CervezasService, private contactosService:ContactosService) {
     this.form = this.fb.group({
@@ -32,28 +30,27 @@ export class AltaContactoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getCervezasApi()
-  
+    this.getCervezasApi();
   }
 
-  onSubmit(){
+  onSubmit():void{
     if(this.form.valid){
       this.contactosService.agregarContacto(this.form.value);
-      console.log('--registrado nuevo contacto')
-      console.log(this.form.value)
+      console.log('--registrado nuevo contacto');
+      console.log(this.form.value);
     }else{
-      console.log('no valido')
+      console.log('no valido');
     }
   }
 
   //metodo para manejar las checkboxes
-  onCheckBoxChange(e:Event){
+  onCheckBoxChange(e:Event):void{
     const cervezasFavoritas: FormArray = this.form.get('cervezasFavoritas') as FormArray;
     
     //seleccionadas
     if ((e.target as HTMLInputElement).checked){
-      cervezasFavoritas.push(new FormControl((e.target as HTMLInputElement).value))
-      console.log((e.target as HTMLInputElement).value)
+      cervezasFavoritas.push(new FormControl((e.target as HTMLInputElement).value));
+      console.log((e.target as HTMLInputElement).value);
 
     //no seleccionadas
     }else{
@@ -75,10 +72,10 @@ export class AltaContactoComponent implements OnInit {
       data.forEach((cerveza: Cerveza,i: number) => {
         this.cerve = new ClaseCerveza(
           cerveza.id,cerveza.name,cerveza.description,cerveza.image_url
-        )
-        this.cervezas.push(this.cerve)
+        );
+        this.cervezas.push(this.cerve);
         
-        console.log(this.cervezas[i])
+        console.log(this.cervezas);
       }))
       
   }
