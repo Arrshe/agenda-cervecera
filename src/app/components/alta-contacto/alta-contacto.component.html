@@ -2,7 +2,8 @@
     <div class="agenda-cervecera-section__registro">
 
         <!--********** FORMULARIO IZQUIERDA ***********-->
-        <form class="agenda-cervecera-section__registro__form" aria-label="formulario de registro" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <form class="agenda-cervecera-section__registro__form" aria-label="formulario de registro" [formGroup]="form"
+            (ngSubmit)="onSubmit()">
             <h3 class="agenda-cervecera-section__registro__form__titulo">¡Regístrate!</h3>
 
             <!--********** INPUT NOMBRE CONTACTO ***********-->
@@ -61,15 +62,13 @@
 
             <!--********** INPUT SEXO CONTACTO ***********-->
             <div class="agenda-cervecera-section__registro__form__item--sexo">
-                <span class="agenda-cervecera-section__registro__form__item--sexo__span" for="sexo">Tu sexo:</span>
+                <label for="sexoItem" class="agenda-cervecera-section__registro__form__item--sexo__label">
+                    Tu sexo:
+                </label>
                 <div class="agenda-cervecera-section__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
-                    <label for="sexoItem"
-                        class="agenda-cervecera-section__registro__form__item--sexo__container__label">
-                        <input class="agenda-cervecera-section__registro__form__item--sexo__container__input"
-                            type="radio" id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo"
-                            [value]="sexo">{{
-                        sexo }}
-                    </label>
+                    <input class="agenda-cervecera-section__registro__form__item--sexo__container__input" type="radio"
+                        id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo" [value]="sexo">
+                    {{ sexo }}
                 </div>
 
                 <!--********** MSG SI NO VALIDO ***********-->
@@ -81,18 +80,17 @@
 
             <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
             <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas">
-                <span class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__span"
-                    for="cervezasFavoritas">Tus cervezas favoritas:</span>
+                <label for="cervezaItem"
+                    class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__label">
+                    Tus cervezas favoritas:
+                </label>
                 <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container"
                     formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
-                    <label for="cervezaItem"
-                        class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label">
-                        <input
-                            class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label__input"
-                            id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
-                            (change)="onCheckBoxChange($event)" />
-                        {{cerveza.name}}
-                    </label>
+                    <input
+                        class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label__input"
+                        id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
+                        (change)="onCheckBoxChange($event)" />
+                    {{cerveza.name}}
                 </div>
 
                 <!--********** MSG SI NO VALIDO ***********-->
