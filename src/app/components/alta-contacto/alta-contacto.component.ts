@@ -53,7 +53,7 @@ export class AltaContactoComponent implements OnInit {
     //seleccionadas
     if ((e.target as HTMLInputElement).checked){
       cervezasFavoritas.push(new FormControl((e.target as HTMLInputElement).value))
-      console.log("a ver que eres" + JSON.stringify((e.target as HTMLInputElement).value))
+      console.log((e.target as HTMLInputElement).value)
 
     //no seleccionadas
     }else{
@@ -72,7 +72,7 @@ export class AltaContactoComponent implements OnInit {
   getCervezasApi():void{
     this.cervezasService.getCervezasApi().subscribe(data=>
       //data es un array de objetos
-      data.forEach((cerveza: any,i: any) => {
+      data.forEach((cerveza: Cerveza,i: number) => {
         this.cerve = new ClaseCerveza(
           cerveza.id,cerveza.name,cerveza.description,cerveza.image_url
         )
