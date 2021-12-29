@@ -61,7 +61,7 @@
 
             <!--********** INPUT SEXO CONTACTO ***********-->
             <div class="agenda-cervecera-main__registro__form__item--sexo">
-                <label class="agenda-cervecera-main__registro__form__item--sexo__label" for="sexo">Tu sexo:</label>
+                <span class="agenda-cervecera-main__registro__form__item--sexo__span" for="sexo">Tu sexo:</span>
                 <div class="agenda-cervecera-main__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
                     <label for="sexoItem" class="agenda-cervecera-main__registro__form__item--sexo__container__label">
                         <input class="agenda-cervecera-main__registro__form__item--sexo__container__input" type="radio"
@@ -79,8 +79,8 @@
 
             <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
             <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas">
-                <label class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__label"
-                    for="cervezasFavoritas">Tus cervezas favoritas:</label>
+                <span class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__span"
+                    for="cervezasFavoritas">Tus cervezas favoritas:</span>
                 <div class="agenda-cervecera-main__registro__form__item--cervezasFavoritas__container"
                     formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
                     <label for="cervezaItem"

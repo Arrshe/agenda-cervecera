@@ -11,7 +11,7 @@
 }
 
 @mixin basic-border{
-    border-width: 1px;
+    border-width: 0.05rem;
     border-style: solid;
     border-radius: var(--border-radius);
 }
@@ -151,6 +151,7 @@
         font-size: var(--form-text-font-size);
         font-weight: var(--form-font-weight);
         color:var(--form-input-color);
+        outline-color: #bf9039;
     }
 
     @mixin form-input-label{
@@ -162,6 +163,14 @@
         font-size: var(--form-small-font-size);
         font-weight: var(--form-font-weight);
         color:var(--form-error-color);
+        padding:var(--form-text-padding);
+    }
+
+    @mixin form-span{
+        font-family: var(--form-text-font-family);
+        font-size: var(--form-label-font-size);
+        font-weight: var(--form-font-weight);
+        color: var(--form-label-color);
         padding:var(--form-text-padding);
     }
 
