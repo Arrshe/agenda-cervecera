@@ -68,24 +68,36 @@
             }
             .agenda-cervecera-section__registro__form__item--sexo{
                 @include display-column;
+
                 .agenda-cervecera-section__registro__form__item--sexo__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--sexo__container{
-                    @include form-input-text;
+                .agenda-cervecera-section__registro__form__item--sexo__radiogroup{
+                    @include display-column;
+                    
+                    .agenda-cervecera-section__registro__form__item--sexo__radiogroup__container{
+                        @include form-input-text;
+                    }
                 }
                 .agenda-cervecera-section__registro__form__item--sexo__small{
                     @include form-small;
                 }
             }
+            
+            
             .agenda-cervecera-section__registro__form__item--cervezasFavoritas{
                 @include display-column;
                 .agenda-cervecera-section__registro__form__item--cervezasFavoritas__label{
                     @include form-label;
                 }
-                .agenda-cervecera-section__registro__form__item--cervezasFavoritas__container{
-                    @include form-input-text;
+                .agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox{
+                    @include display-column;
+
+                    .agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox__container{
+                        @include form-input-text;
+                    }
                 }
+                
                 .agenda-cervecera-section__registro__form__item--cervezasFavoritas__small{
                     @include form-small;
                 }

@@ -15,11 +15,11 @@
 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-section__registro__form__item--nombreContacto__small"
-                    *ngIf="form.get('nombreContacto')?.errors?.['required']">
+                    *ngIf="form.get('nombreContacto')?.errors?.['required']" role="alert">
                     *Tienes que insertar tu nombre
                 </small>
                 <small class="agenda-cervecera-section__registro__form__item--nombreContacto__small"
-                    *ngIf="form.get('nombreContacto')?.errors?.['maxlength']">
+                    *ngIf="form.get('nombreContacto')?.errors?.['maxlength']" role="alert">
                     *El máximo permitido de caracteres es 30
                 </small>
             </div>
@@ -33,15 +33,15 @@
 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-section__registro__form__item--telefono__small"
-                    *ngIf="form.get('telefono')?.errors?.['required']">
+                    *ngIf="form.get('telefono')?.errors?.['required']" role="alert">
                     *Tienes que insertar tu número de teléfono
                 </small>
                 <small class="agenda-cervecera-section__registro__form__item--telefono__small"
-                    *ngIf="form.get('telefono')?.errors?.['minlength']">
+                    *ngIf="form.get('telefono')?.errors?.['minlength']" role="alert">
                     *Tienen que ser mínimo 9 números
                 </small>
                 <small class="agenda-cervecera-section__registro__form__item--telefono__small"
-                    *ngIf="form.get('telefono')?.errors?.['maxlength']">
+                    *ngIf="form.get('telefono')?.errors?.['maxlength']" role="alert">
                     *Tienen que ser máximo 9 números
                 </small>
             </div>
@@ -55,51 +55,64 @@
 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-section__registro__form__item--fechaNacimiento__small"
-                    *ngIf="form.get('fechaNacimiento')?.errors?.['required']">
+                    *ngIf="form.get('fechaNacimiento')?.errors?.['required']" role="alert">
                     *Tienes que insertar tu fecha de nacimiento
                 </small>
             </div>
 
             <!--********** INPUT SEXO CONTACTO ***********-->
             <div class="agenda-cervecera-section__registro__form__item--sexo">
-                <label for="sexoItem" class="agenda-cervecera-section__registro__form__item--sexo__label">
+                <label for="sexoItem" class="agenda-cervecera-section__registro__form__item--sexo__label" id="sexo">
                     Tu sexo:
                 </label>
-                <div class="agenda-cervecera-section__registro__form__item--sexo__container" *ngFor="let sexo of sexos">
-                    <input class="agenda-cervecera-section__registro__form__item--sexo__container__input" type="radio"
-                        id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo" [value]="sexo">
-                    {{ sexo }}
+                <div class="agenda-cervecera-section__registro__form__item--sexo__radiogroup" role="radiogroup"
+                    aria-labeledby="sexo">
+                    <div class="agenda-cervecera-section__registro__form__item--sexo__radiogroup__container"
+                        *ngFor="let sexo of sexos" role="radio">
+                        <input
+                            class="agenda-cervecera-section__registro__form__item--sexo__radiogroup__container__input"
+                            type="radio" id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo"
+                            [value]="sexo">
+                        {{ sexo }}
+                    </div>
                 </div>
 
                 <!--********** MSG SI NO VALIDO ***********-->
+
                 <small class="agenda-cervecera-section__registro__form__item--sexo__small"
-                    *ngIf="form.get('sexo')?.errors?.['required']">
+                    *ngIf="form.get('sexo')?.errors?.['required']" role="alert">
                     *Tienes que insertar tu sexo
                 </small>
+
             </div>
+
 
             <!--********** INPUT TUS CERVEZAS FAVORITAS ***********-->
             <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas">
                 <label for="cervezaItem"
-                    class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__label">
+                    class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__label" id="listaCervezas">
                     Tus cervezas favoritas:
                 </label>
-                <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container"
-                    formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index">
-                    <input
-                        class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label__input"
-                        id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
-                        (change)="onCheckBoxChange($event)" />
-                    {{cerveza.name}}
+                <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox" role="group"
+                    aria-labelledby="listaCervezas">
+                    <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox__container"
+                        formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index" role="checkbox">
+                        <input
+                            class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label__input"
+                            id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
+                            (change)="onCheckBoxChange($event)" />
+                        {{cerveza.name}}
+                    </div>
                 </div>
+
 
                 <!--********** MSG SI NO VALIDO ***********-->
                 <small class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__small"
-                    *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']">
+                    *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']" role="alert">
                     *Tienes que elegir al menos una cerveza
                 </small>
                 <small class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__small"
-                    *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']">
+                    *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']" role="alert">
                     *Tienes que insertar un máximo de 3 cervezas
                 </small>
 
