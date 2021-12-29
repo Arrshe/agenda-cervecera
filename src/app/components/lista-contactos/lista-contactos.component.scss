@@ -11,6 +11,7 @@
     .agenda-cervecera-contacto{
         @include display-column;
         @include card-contacto;
+        animation: fadein 1s;
         .agenda-cervecera-main__lista--nombreContacto{
             @include basic-font;
             font-size:var(--card-title-size);
