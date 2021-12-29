@@ -13,8 +13,8 @@ export class ListaContactosComponent implements OnInit {
   contactos:Contacto[];
 
   constructor(private contactosService:ContactosService) { 
-    this.contactos=this.contactosService.contactos;
-    //this.contactos=CONTACTOS;
+    //this.contactos=this.contactosService.contactos;
+    this.contactos=CONTACTOS;
   }
 
   ngOnInit(): void {

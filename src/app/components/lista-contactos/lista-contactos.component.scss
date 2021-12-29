@@ -3,9 +3,11 @@
 .agenda-cervecera-section{
     display:var(--basic-display);
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     max-width: 35rem;
     padding:var(--main-padding);
-    margin: auto;
+    margin: 0 auto;
     .agenda-cervecera-contacto{
         @include display-column;
         @include card-contacto;

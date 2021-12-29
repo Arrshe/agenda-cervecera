@@ -3,6 +3,10 @@
 .agenda-cervecera-section{
     display:var(--basic-display);
     padding:var(--main-padding);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
     .agenda-cervecera-main__registro{
         @include display-row;
         background-color: var(--secondary-bg-color);
@@ -11,7 +15,11 @@
         align-items: center;
         justify-content: space-between;
         width: 50rem;
-        margin: auto;
+        margin: 0 auto;
+        @include for-large-screen{
+            @include display-column;
+            width: auto;
+        }
         .agenda-cervecera-main__registro__form{
             background-color: var(--primary-bg-color);
             padding: var(--form-padding);
@@ -101,6 +109,9 @@
             background-color: var(--primary-bg-color);
             border-radius: 5rem;
             padding: 3rem;
+            @include for-large-screen{
+                display: none;
+            }
         }
     }
 }

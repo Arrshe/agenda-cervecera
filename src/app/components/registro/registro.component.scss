@@ -7,4 +7,9 @@
     align-items: center;
     justify-content: space-evenly;
     padding:var(--main-padding);
+    width: auto;
+    margin: 0 auto;
+    @include for-laptop{
+        flex-direction: column;
+    }
 }
