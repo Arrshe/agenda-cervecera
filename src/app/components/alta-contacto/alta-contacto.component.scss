@@ -2,7 +2,6 @@
 
 .agenda-cervecera-section{
     display:var(--basic-display);
-    padding:var(--main-padding);
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -24,6 +23,10 @@
             background-color: var(--primary-bg-color);
             padding: var(--form-padding);
             border-radius: var(--border-radius);
+            @include for-mobile{
+                width: 70vw;
+                padding: 1rem;
+            }
             .agenda-cervecera-main__registro__form__titulo{
                 @include form-title;
             }

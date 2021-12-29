@@ -10,6 +10,8 @@
         font-family: var(--footer-font-family);
         font-size: var(--footer-font-size);
         font-weight: var(--footer-font-weight);
+        text-align: center;
+        line-height: 2rem;
         .agenda-cervecera-footer__copyright__link{
             @include footer-button;
             &:hover{
