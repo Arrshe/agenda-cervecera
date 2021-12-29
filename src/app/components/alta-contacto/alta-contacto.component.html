@@ -68,10 +68,10 @@
                 <div class="agenda-cervecera-section__registro__form__item--sexo__radiogroup" role="radiogroup"
                     aria-labeledby="sexo">
                     <div class="agenda-cervecera-section__registro__form__item--sexo__radiogroup__container"
-                        *ngFor="let sexo of sexos" role="radio">
+                        *ngFor="let sexo of sexos" role="option">
                         <input
                             class="agenda-cervecera-section__registro__form__item--sexo__radiogroup__container__input"
-                            type="radio" id="sexoItem" aria-label="opción sexo" name="sexo" formControlName="sexo"
+                            type="radio" id="sexoItem" role="radio" aria-label="opción sexo" name="sexo" formControlName="sexo"
                             [value]="sexo">
                         {{ sexo }}
                     </div>
@@ -96,10 +96,10 @@
                 <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox" role="group"
                     aria-labelledby="listaCervezas">
                     <div class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__checkbox__container"
-                        formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index" role="checkbox">
+                        formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index" role="option">
                         <input
                             class="agenda-cervecera-section__registro__form__item--cervezasFavoritas__container__label__input"
-                            id="cervezaItem" type="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
+                            id="cervezaItem" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
                             (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </div>
