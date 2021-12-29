@@ -9,7 +9,7 @@
     @include for-mobile{
         @include display-column;  
     }
-    .agenda-cervecera-header__titulo{
+    &__titulo{
         font-family: var(--header-font-family);
         font-size: var(--header-font-size);
         color:var(--main-text-decoration);
@@ -17,15 +17,16 @@
             padding-bottom:1rem;
         }
     }
-    .agenda-cervecera-header__nav{
-        .agenda-cervecera-header__nav-listaNav{
+    &__nav{
+        &__listaNav{
             @include display-row;
             padding: var(--basic-padding);
             align-items: var(--nav-align);
             justify-content: var(--nav-space);
             width: var(--nav-width);
-            .agenda-cervecera-header__nav-listaNav--registro__enlace,
-            .agenda-cervecera-header__nav-listaNav--lista__enlace
+
+            &--registro__enlace,
+            &--lista__enlace
             {
                 @include nav-button;
 

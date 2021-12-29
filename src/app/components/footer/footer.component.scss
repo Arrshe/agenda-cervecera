@@ -6,13 +6,13 @@
     justify-content: center;
     background-color: var(--footer-bg-color);
     padding: var(--footer-padding);
-    .agenda-cervecera-footer__copyright{
+    &__copyright{
         font-family: var(--footer-font-family);
         font-size: var(--footer-font-size);
         font-weight: var(--footer-font-weight);
         text-align: center;
         line-height: 2rem;
-        .agenda-cervecera-footer__copyright__link{
+        &__link{
             @include footer-button;
             &:hover{
                 @include footer-button-hover;
