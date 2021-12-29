@@ -13,7 +13,7 @@
         border-radius: var(--border-radius);
         align-items: center;
         justify-content: space-between;
-        width: 50rem;
+        width: 45rem;
         margin: 0 auto;
         @include for-large-screen{
             @include display-column;
@@ -108,7 +108,7 @@
             }
         }
         .agenda-cervecera-section__containerRegistro-containerImg{
-            margin-right: 6rem;
+            margin-right: 2.8rem;
             background-color: var(--primary-bg-color);
             border-radius: 5rem;
             padding: 3rem;
