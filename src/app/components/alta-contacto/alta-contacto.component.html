@@ -4,7 +4,7 @@
         <!--********** FORMULARIO IZQUIERDA ***********-->
         <form class="agenda-cervecera-alta__form" aria-label="formulario de registro" [formGroup]="form"
             (ngSubmit)="onSubmit()">
-            <h2 class="agenda-cervecera-alta__titulo-form">¡Regístrate!</h2>
+            <h2 class="agenda-cervecera-alta__titulo">¡Regístrate!</h2>
 
             <!--********** INPUT NOMBRE CONTACTO ***********-->
             <div class="agenda-cervecera-alta__item">
@@ -62,7 +62,7 @@
 
             <!--********** INPUT SEXO CONTACTO ***********-->
             <div class="agenda-cervecera-alta__item">
-                <label for="sexoItem" class="agenda-cervecera-section__item--label" id="sexo">
+                <label for="sexoItem" class="agenda-cervecera-alta__item--label" id="sexo">
                     Tu sexo:
                 </label>
                 <div class="agenda-cervecera-alta__radiogroup" role="radiogroup"
@@ -111,7 +111,7 @@
                     *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['required']" role="alert">
                     *Tienes que elegir al menos una cerveza
                 </small>
-                <small class="agenda-cervecera-alta__item---error"
+                <small class="agenda-cervecera-alta__item--error"
                     *ngIf="this.form.controls['cervezasFavoritas']?.errors?.['maxlength']" role="alert">
                     *Tienes que insertar un máximo de 3 cervezas
                 </small>

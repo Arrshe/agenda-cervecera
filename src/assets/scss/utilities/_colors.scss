@@ -1,34 +1,31 @@
-:root{
+:root {
+	/****BASE****/
+	--primary-bg-color: aliceblue;
+	--secondary-bg-color: #4ba67b;
+	--tertiary-bg-color: #f2b544;
+	--quaternary-bg-color: #ed442b;
 
-/****BASE****/
---primary-bg-color:aliceblue ;
---secondary-bg-color:#4BA67B;
---tertiary-bg-color:#F2B544;
---quaternary-bg-color: #ED442B;
+	--primary-hover-bg-color: aliceblue;
 
---primary-hover-bg-color:aliceblue;
+	/****TEXTO****/
+	--primary-text-color: #1a1919;
+	--secondary-text-color: #bf9039;
+	--tertiary-text-color: aliceblue;
+	--quaternary-text-color: #4ba67b;
+	--error-text-color: #ed442b;
 
-/****TEXTO****/
---primary-text-color:#1a1919;
---secondary-text-color:#BF9039;
---tertiary-text-color:aliceblue;
---quaternary-text-color:#4BA67B;
---error-text-color: #ED442B;
+	--primary-hover-text-color: #4ba67b;
 
---primary-hover-text-color:#4BA67B;
+	/****SOMBRAS****/
+	--primary-shadow-color: #bf9039;
 
-/****SOMBRAS****/
---primary-shadow-color:#BF9039;
+	/****BORDES****/
+	--primary-border-color: #4ba67b;
+	--secondary-border-color: #ed442b;
+	--primary-hover-border-color: #4ba67b;
+	--secondary-hover-border-color: #ed442b;
+	--disabled-border-color: #85978f;
 
-/****BORDES****/
---primary-border-color:#4BA67B;
---secondary-border-color:#ED442B;
---primary-hover-border-color:#4BA67B;
---secondary-hover-border-color:#ED442B;
---disabled-border-color:#85978f;
-
-/****ESTADOS****/
---disabled-color:#85978f;
+	/****ESTADOS****/
+	--disabled-color: #85978f;
 }
-
-
