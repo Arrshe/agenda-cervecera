@@ -1,18 +1,11 @@
 /****BASE****/
-@import url('./scss/base/_reset.scss');
-@import url('./scss/base/_typo.scss');
+@import url('./scss/base/_base.scss');
 
 /****UTILITIES****/
-@import url('./scss/utilities/_colors.scss');
-@import url('./scss/utilities/_mixins.scss');
-@import url('./scss/utilities/_animations.scss');
+@import url('./scss/utilities/_utilities.scss');
 
 /****LAYOUT****/
 @import url('./scss/layout/_layout.scss');
 
 /****COMPONENTS****/
-@import url('./scss/components/_buttons.scss');
-@import url('./scss/components/_card.scss');
-
-
-/****VIEWS****/
+@import url('./scss/components/_components.scss');
