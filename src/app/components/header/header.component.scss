@@ -1,34 +1,32 @@
 @import '../../../assets/scss/utilities/mixins';
 
-.agenda-cervecera-header{
-    @include display-row;
-    background-color: var(--tertiary-bg-color);
-    padding: var(--basic-padding);
-    align-items: var(--header-align);
-    justify-content: var(--header-space);
-    @include for-mobile{
-        @include display-column;  
-    }
-    
-    &__titulo{
-        font-family: var(--header-font-family);
-        font-size: var(--header-font-size);
-        color:var(--main-text-decoration);
-        @include for-mobile{
-            padding-bottom:1rem;
-        }
-    }
-    &__lista{
-        @include display-row;
-        padding: var(--basic-padding);
-        align-items: var(--nav-align);
-        justify-content: var(--nav-space);
-        width: var(--nav-width);
+.agenda-cervecera-header {
+	@include display-row;
+	background-color: var(--tertiary-bg-color);
+	padding: var(--basic-padding);
+	align-items: var(--header-align);
+	justify-content: var(--header-space);
+	@include for-mobile {
+		@include display-column;
+	}
 
-        &--link{
-            @include nav-button;
-        }
-    }
-    
-    
+	&__titulo {
+		font-family: var(--header-font-family);
+		font-size: var(--header-font-size);
+		color: var(--main-text-decoration);
+		@include for-mobile {
+			padding-bottom: 1rem;
+		}
+	}
+	&__lista {
+		@include display-row;
+		padding: var(--basic-padding);
+		align-items: var(--nav-align);
+		justify-content: var(--nav-space);
+		width: var(--nav-width);
+
+		&--link {
+			@include nav-button;
+		}
+	}
 }

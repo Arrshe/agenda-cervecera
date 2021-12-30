@@ -1,187 +1,185 @@
 /****LAYOUT****/
-@mixin display-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+@mixin display-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
-@mixin display-column{
-    display: flex;
-    flex-direction: column;
+@mixin display-column {
+	display: flex;
+	flex-direction: column;
 }
 
-@mixin basic-border{
-    border-width: 0.05rem;
-    border-style: solid;
-    border-radius: var(--border-radius);
+@mixin basic-border {
+	border-width: 0.05rem;
+	border-style: solid;
+	border-radius: var(--border-radius);
 }
 
-    /****MEDIA QUERIES****/
-    @mixin for-mobile{
-        @media only screen and (max-width:526px){
-            @content;
-        }
-    }
+/****MEDIA QUERIES****/
+@mixin for-mobile {
+	@media only screen and (max-width: 526px) {
+		@content;
+	}
+}
 
-    @mixin for-tablet{
-        @media only screen and (max-width:768px){
-            @content;
-        }
-    }
+@mixin for-tablet {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
 
-    @mixin for-laptop{
-        @media only screen and (max-width:1024px){
-            @content;
-        }
-    }
+@mixin for-laptop {
+	@media only screen and (max-width: 1024px) {
+		@content;
+	}
+}
 
-    @mixin for-large-screen{
-        @media only screen and (max-width:1472px){
-            @content;
-        }
-    }
+@mixin for-large-screen {
+	@media only screen and (max-width: 1472px) {
+		@content;
+	}
+}
 
-
-    /****FONTS****/
-@mixin basic-font{
-    font-family: var(--body-font-family);
-    font-size: var(--base-font-size);
-    font-weight: var(--base-font-weight);
-    color:var(--tertiary-text-color);
-    padding: var(--basic-text-padding);
+/****FONTS****/
+@mixin basic-font {
+	font-family: var(--body-font-family);
+	font-size: var(--base-font-size);
+	font-weight: var(--base-font-weight);
+	color: var(--tertiary-text-color);
+	padding: var(--basic-text-padding);
 }
 
 /****COMPONENTS****/
 
-    /****BUTTONS****/
-    @mixin basic-button{
-        padding: var(--header-padding);
-        border-radius: var(--border-radius);
-        font-family: var(--body-font-family);
-        font-size: var(--base-font-size);
-        font-weight: var(--base-font-weight);
-    }
+/****BUTTONS****/
+@mixin basic-button {
+	padding: var(--header-padding);
+	border-radius: var(--border-radius);
+	font-family: var(--body-font-family);
+	font-size: var(--base-font-size);
+	font-weight: var(--base-font-weight);
+}
 
-    @mixin link-button{
-        @include basic-button;
-        text-decoration: var(--basic-text-decoration);
-    }
+@mixin link-button {
+	@include basic-button;
+	text-decoration: var(--basic-text-decoration);
+}
 
-    @mixin nav-button{
-        @include link-button;
-        background-color: var(--primary-bg-color);
-        color: var(--primary-text-color);
+@mixin nav-button {
+	@include link-button;
+	background-color: var(--primary-bg-color);
+	color: var(--primary-text-color);
 
-        &:hover{
-            background-color: var(--secondary-bg-color);
-            color: var(--tertiary-text-color);
-            transition: var(--button-transition);
-        }
-    }
+	&:hover {
+		background-color: var(--secondary-bg-color);
+		color: var(--tertiary-text-color);
+		transition: var(--button-transition);
+	}
+}
 
-    @mixin submit-button{
-        @include basic-button;
-        @include basic-border;
-        background-color: var(--secondary-bg-color);
-        color: var(--tertiary-text-color);
-        border-color:var(--primary-border-color);
+@mixin submit-button {
+	@include basic-button;
+	@include basic-border;
+	background-color: var(--secondary-bg-color);
+	color: var(--tertiary-text-color);
+	border-color: var(--primary-border-color);
 
-        &:hover{
-            background-color: var(--primary-hover-bg-color);
-            color: var(--primary-hover-text-color);
-            border-color:var(--primary-hover-border-color);
-            transition: var(--button-transition); 
-        }
+	&:hover {
+		background-color: var(--primary-hover-bg-color);
+		color: var(--primary-hover-text-color);
+		border-color: var(--primary-hover-border-color);
+		transition: var(--button-transition);
+	}
 
-        &:disabled{
-            background-color: var(--button-bg-disabled);
-            color: var(--button-text-disabled);
-            border-color:var(--disabled-border-color); 
-        }
-    }
+	&:disabled {
+		background-color: var(--button-bg-disabled);
+		color: var(--button-text-disabled);
+		border-color: var(--disabled-border-color);
+	}
+}
 
-    @mixin cancel-button{
-        @include link-button;
-        @include basic-border;
-        background-color: var(--quaternary-bg-color);
-        color: var(--tertiary-text-color);
-        border-color:var(--secondary-border-color);
+@mixin cancel-button {
+	@include link-button;
+	@include basic-border;
+	background-color: var(--quaternary-bg-color);
+	color: var(--tertiary-text-color);
+	border-color: var(--secondary-border-color);
 
-        &:hover{
-            background-color: var(--primary-bg-color);
-            color: var(--error-text-color);
-            border-color:var(--secondary-hover-border-color);
-            transition: var(--button-transition);
-        }
-    }
+	&:hover {
+		background-color: var(--primary-bg-color);
+		color: var(--error-text-color);
+		border-color: var(--secondary-hover-border-color);
+		transition: var(--button-transition);
+	}
+}
 
-    @mixin footer-button{
-        @include link-button;
-        background-color: var(--primary-bg-color);
-        color: var(--quaternary-text-color);
-        padding: 0.5rem;
+@mixin footer-button {
+	@include link-button;
+	background-color: var(--primary-bg-color);
+	color: var(--quaternary-text-color);
+	padding: 0.5rem;
 
-        &:hover{
-            background-color: var(--secondary-bg-color);
-            color: var(--tertiary-text-color);
-            padding: 0.5rem;
-        }
-    }
+	&:hover {
+		background-color: var(--secondary-bg-color);
+		color: var(--tertiary-text-color);
+		padding: 0.5rem;
+	}
+}
 
+/****FORMS****/
 
-    /****FORMS****/
-    
-    @mixin form-title{
-        font-family: var(--form-title-font-family);
-        font-size: var(--form-title-font-size);
-        font-weight: var(--form-font-weight);
-        color: var(--form-title-color);
-        text-align: var(--form-text-align);
-        padding: var(--form-text-padding);
-    }
+@mixin form-title {
+	font-family: var(--form-title-font-family);
+	font-size: var(--form-title-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-title-color);
+	text-align: var(--form-text-align);
+	padding: var(--form-text-padding);
+}
 
-    @mixin form-label{
-        font-family: var(--form-text-font-family);
-        font-size: var(--form-label-font-size);
-        font-weight: var(--form-font-weight);
-        color: var(--form-label-color);
-        padding:var(--form-text-padding);
-    }
+@mixin form-label {
+	font-family: var(--form-text-font-family);
+	font-size: var(--form-label-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-label-color);
+	padding: var(--form-text-padding);
+}
 
-    @mixin form-input{
-        font-family: var(--form-text-font-family);
-        font-size: var(--form-text-font-size);
-        font-weight: var(--form-font-weight);
-        color:var(--form-input-color);
-        outline-color: #bf9039;
-    }
+@mixin form-input {
+	font-family: var(--form-text-font-family);
+	font-size: var(--form-text-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-input-color);
+	outline-color: #bf9039;
+}
 
-    @mixin form-input-text{
-        @include form-input;
-    }
+@mixin form-input-text {
+	@include form-input;
+}
 
-    @mixin form-small{
-        font-family: var(--form-text-font-family);
-        font-size: var(--form-small-font-size);
-        font-weight: var(--form-font-weight);
-        color:var(--form-error-color);
-        padding:var(--form-text-padding);
-    }
+@mixin form-small {
+	font-family: var(--form-text-font-family);
+	font-size: var(--form-small-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-error-color);
+	padding: var(--form-text-padding);
+}
 
-    @mixin form-span{
-        font-family: var(--form-text-font-family);
-        font-size: var(--form-label-font-size);
-        font-weight: var(--form-font-weight);
-        color: var(--form-label-color);
-        padding:var(--form-text-padding);
-    }
+@mixin form-span {
+	font-family: var(--form-text-font-family);
+	font-size: var(--form-label-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-label-color);
+	padding: var(--form-text-padding);
+}
 
-    /****CARDS****/
-    @mixin card-contacto{
-        @include display-column;
-        padding: var(--card-padding);
-        margin: 0rem 1rem 1rem 1rem;
-        background-color: var(--card-bg-color);
-        border-radius: var(--card-border-radius);
-        height: 21rem;
-    }
+/****CARDS****/
+@mixin card-contacto {
+	@include display-column;
+	padding: var(--card-padding);
+	margin: 0rem 1rem 1rem 1rem;
+	background-color: var(--card-bg-color);
+	border-radius: var(--card-border-radius);
+	height: 21rem;
+}
