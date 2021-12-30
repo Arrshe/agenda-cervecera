@@ -1,0 +1,80 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-alta {
+	@include display-column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+
+	&__wrapper {
+		@include display-row;
+		background-color: var(--secondary-bg-color);
+		padding: var(--basic-padding);
+		border-radius: var(--border-radius);
+		align-items: center;
+		justify-content: space-between;
+		width: 45rem;
+		margin: 0 auto;
+		@include for-large-screen {
+			@include display-column;
+			width: auto;
+		}
+	}
+	&__form {
+		background-color: var(--primary-bg-color);
+		padding: var(--form-padding);
+		border-radius: var(--border-radius);
+		@include for-mobile {
+			width: 70vw;
+			padding: 1rem;
+		}
+	}
+	&__titulo {
+		@include form-title;
+	}
+	&__item {
+		@include display-column;
+
+		&--label {
+			@include form-label;
+		}
+		&--input {
+			@include form-input;
+		}
+		&--error {
+			@include form-small;
+		}
+	}
+	&__radiogroup {
+		@include display-column;
+
+		&--wrapper {
+			@include form-input-text;
+		}
+	}
+	&__checkbox {
+		@include display-column;
+
+		&--wrapper {
+			@include form-input-text;
+		}
+	}
+	&__submit {
+		@include submit-button;
+	}
+	&__cancel {
+		@include cancel-button;
+		margin-left: 1rem;
+	}
+
+	&__imagenLateral {
+		margin-right: 2.8rem;
+		background-color: var(--primary-bg-color);
+		border-radius: 5rem;
+		padding: 3rem;
+		@include for-large-screen {
+			display: none;
+		}
+	}
+}
