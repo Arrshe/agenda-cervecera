@@ -8,29 +8,31 @@
     max-width: 50rem;
     padding:var(--main-padding);
     margin: 0 auto;
-    &__contacto{
+    
+    &__wrapper{
         @include display-column;
         @include card-contacto;
         animation: fadein 1s;
-        &__lista--nombreContacto{
+    }
+    &__nombreContacto{
             @include basic-font;
             font-size:var(--card-title-size);
-        }
-        &__lista--fechaNacimiento,
-        &__lista--sexo,
-        &__lista--telefono,
-        &__lista--cervezasFavoritas{
-            @include basic-font;
-        }
-        &__lista__container__cervezasFavoritas__lista{
+    }
+    &__fechaNacimiento,
+    &__sexo,
+    &__telefono,
+    &__cervezasFavoritas{
+        @include basic-font;
+        
+        &--wrapper{
             background-color: var(--primary-bg-color);
             padding: var(--basic-padding);
             border-radius: var(--border-radius);
             height: 8.5rem;
-            &__cerveza{
-                @include basic-font;
-                color: var(--primary-text-color);
-            }
         }
+        &--item{
+            @include basic-font;
+            color: var(--primary-text-color);
+        } 
     }
 }
