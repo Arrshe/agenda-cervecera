@@ -6,14 +6,15 @@
     justify-content: center;
     background-color: var(--footer-bg-color);
     padding: var(--footer-padding);
+    
     &__copyright{
         font-family: var(--footer-font-family);
         font-size: var(--footer-font-size);
         font-weight: var(--footer-font-weight);
         text-align: center;
-        line-height: 2rem;
-        &__link{
-            @include footer-button;
-        }
+        line-height: 2rem;  
+    }
+    &__link{
+        @include footer-button;
     }
 }

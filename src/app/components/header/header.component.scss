@@ -9,6 +9,7 @@
     @include for-mobile{
         @include display-column;  
     }
+    
     &__titulo{
         font-family: var(--header-font-family);
         font-size: var(--header-font-size);
@@ -17,20 +18,17 @@
             padding-bottom:1rem;
         }
     }
-    &__nav{
-        &__listaNav{
-            @include display-row;
-            padding: var(--basic-padding);
-            align-items: var(--nav-align);
-            justify-content: var(--nav-space);
-            width: var(--nav-width);
+    &__lista{
+        @include display-row;
+        padding: var(--basic-padding);
+        align-items: var(--nav-align);
+        justify-content: var(--nav-space);
+        width: var(--nav-width);
 
-            &--registro__enlace,
-            &--lista__enlace
-            {
-                @include nav-button;
-            }
+        &--link{
+            @include nav-button;
         }
     }
+    
     
 }
