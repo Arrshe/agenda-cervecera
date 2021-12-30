@@ -1,18 +1,18 @@
 <section class="agenda-cervecera-section" aria-label="lista de contactos">
-    <div class="agenda-cervecera-section__contacto" *ngFor="let contacto of contactos" aria-label="contacto">
-        <h3 class="agenda-cervecera-section__contacto__lista--nombreContacto">Nombre: {{contacto.nombreContacto}}</h3>
-        <p class="agenda-cervecera-section__contacto__lista--fechaNacimiento" aria-label="fecha de nacimiento">Fecha de
+    <div class="agenda-cervecera-section__wrapper" *ngFor="let contacto of contactos" aria-label="contacto">
+        <h2 class="agenda-cervecera-section__nombreContacto">Nombre: {{contacto.nombreContacto}}</h2>
+        <p class="agenda-cervecera-section__fechaNacimiento" aria-label="fecha de nacimiento">Fecha de
             nacimiento: {{contacto.fechaNacimiento}}
         </p>
-        <p class="agenda-cervecera-section__contacto__lista--sexo" aria-label="sexo">Sexo: {{contacto.sexo}}</p>
-        <p class="agenda-cervecera-section__contacto__lista--telefono" aria-label="teléfono">Telefono: {{contacto.telefono}}</p>
-        <p class="agenda-cervecera-section__contacto__lista--cervezasFavoritas" aria-label="cervezas favoritas">Cervezas
+        <p class="agenda-cervecera-section__sexo" aria-label="sexo">Sexo: {{contacto.sexo}}</p>
+        <p class="agenda-cervecera-section__telefono" aria-label="teléfono">Telefono: {{contacto.telefono}}</p>
+        <p class="agenda-cervecera-section__cervezasFavoritas" aria-label="cervezas favoritas">Cervezas
             favoritas:</p>
-        <ul class="agenda-cervecera-section__contacto__lista__container__cervezasFavoritas__lista"
+        <ul class="agenda-cervecera-section__cervezasFavoritas--wrapper"
             aria-label="lista de cervezas favoritas">
-            <li class="agenda-cervecera-section__contacto__lista__container__cervezasFavoritas__lista__cerveza"
+            <li class="agenda-cervecera-section__cervezasFavoritas--item"
                 *ngFor="let cerveza of contacto.cervezasFavoritas; let i=index" aria-label="cerveza favorita">
-                <img class="agenda-cervecera-section__contacto__lista__container__cervezasFavoritas__lista__cerveza__icono"
+                <img class="agenda-cervecera-section__cervezasFavoritas-icono"
                     src="https://img.icons8.com/ios-glyphs/30/000000/beer-bottle.png" alt="icono botella de cerveza" />
                 {{contacto.cervezasFavoritas[i]}}
             </li>
