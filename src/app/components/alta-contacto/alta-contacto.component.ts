@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 //import { CERVEZAS } from 'src/app/mock-cervezas/mock-cervezas';
 import Cerveza from 'src/app/model/Cerveza';
@@ -13,9 +13,16 @@ import { ContactosService } from 'src/app/services/contactos.service';
 })
 export class AltaContactoComponent implements OnInit {
 
+  @ViewChildren("checkboxes")
+  checkboxes!: QueryList<ElementRef>;
+
   cervezas:Cerveza[]=[]
   cerve!:Cerveza;
   sexos:Array<string> = ['Hombre', 'Mujer'];
+
+  cervezasFavoritas!: FormArray;
+
+  uncheck:boolean = false;
   
   toStr = JSON.stringify;
 
@@ -43,34 +50,56 @@ export class AltaContactoComponent implements OnInit {
 
       //limpiamos el formulario
       this.form.reset();
+      
+      
 
     }else{
       console.log('no valido');
     }
   }
 
+  uncheckAll() {
+    this.checkboxes.forEach((element) => {
+      element.nativeElement.checked = false;
+    });
+  }
+  
   //metodo para manejar las checkboxes
   onCheckBoxChange(e:Event):void{
-    const cervezasFavoritas: FormArray = this.form.get('cervezasFavoritas') as FormArray;
+    this.cervezasFavoritas = this.form.get('cervezasFavoritas') as FormArray;
     
     //seleccionadas
     if ((e.target as HTMLInputElement).checked){
-      let value=JSON.parse((e.target as HTMLInputElement).value)
-      cervezasFavoritas.push(new FormControl(value));
+      let value = JSON.parse((e.target as HTMLInputElement).value)
+      this.cervezasFavoritas.push(new FormControl(value));
       console.log(value);
+      console.log(this.cervezasFavoritas)
 
     //no seleccionadas
     }else{
-      let i:number =0;
-      cervezasFavoritas.controls.forEach((item) => {
+      let i:number = 0;
+      this.cervezasFavoritas.controls.forEach((item) => {
+        console.log("item id--- " + item.value.id )
         if(item.value.id == JSON.parse((e.target as HTMLInputElement).value).id){
-          cervezasFavoritas.removeAt(i);
+          this.cervezasFavoritas.removeAt(i);
+          console.log("target id--- " + JSON.parse((e.target as HTMLInputElement).value).id )
           return;
         }
         i++;
       });   
     }
+    this.uncheck=false;
     
+  }
+
+  unCheckAll(e:Event):void{
+    this.uncheck = true;
+    if((e.target as HTMLInputElement).checked){
+      !this.form.invalid
+    } else {
+      this.form.invalid
+    }
+      this.form.reset();
   }
 
   //metodo para rellenar el array cervezas con la api
