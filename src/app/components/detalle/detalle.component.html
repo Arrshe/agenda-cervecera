@@ -1,7 +1,20 @@
-<div class="agenda-cervecera-detalle">
-    <img src="#" alt="cerveza" class="agenda-cervecera-detalle__imagen">
-    <h2 class="agenda-cervecera-detalle__nombreCerveza"></h2>
-    <div class="agenda-cervecera-detalle__wrapperDescripcion">
-        <p class="agenda-cervecera-detalle__wrapperDescripcion--texto"></p>
-    </div>
+<div class="agenda-cervecera-detalle" *ngIf="contacto">
+    <p class="agenda-cervecera-detalle__fechaNacimiento" aria-label="fecha de nacimiento">Fecha de
+        nacimiento: {{contacto.fechaNacimiento}}
+    </p>
+    <p class="agenda-cervecera-detalle__sexo" aria-label="sexo">Sexo: {{contacto.sexo}}</p>
+    <p class="agenda-cervecera-detalle__telefono" aria-label="teléfono">Telefono: {{contacto.telefono}}</p>
+    <p class="agenda-cervecera-detalle__cervezasFavoritas" aria-label="cervezas favoritas">Cervezas
+        favoritas:</p>
+    <ul class="agenda-cervecera-detalle__cervezasFavoritas--wrapper"
+        aria-label="detalle de cervezas favoritas">
+        <li class="agenda-cervecera-detalle__cervezasFavoritas--item"
+            *ngFor="let cerveza of contacto.cervezasFavoritas; let i=index" aria-label="cerveza favorita">
+            <img src="{{contacto.cervezasFavoritas[i].image_url}}" alt="cerveza" class="agenda-cervecera-detalle__imagen">
+            <h3 class="agenda-cervecera-detalle__nombreCerveza">{{contacto.cervezasFavoritas[i].name}}</h3>
+            <div class="agenda-cervecera-detalle__wrapperDescripcion">
+                <p class="agenda-cervecera-detalle__wrapperDescripcion--texto">{{contacto.cervezasFavoritas[i].description}}</p>
+            </div>
+        </li>   
+    </ul> 
 </div>

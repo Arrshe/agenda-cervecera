@@ -11,6 +11,7 @@ import { ContactosService } from 'src/app/services/contactos.service';
 export class ListaContactosComponent implements OnInit {
 
   contactos:Contacto[];
+  selectedContacto!: Contacto;
 
   constructor(private contactosService:ContactosService) { 
     this.contactos=this.contactosService.contactos;
@@ -20,4 +21,7 @@ export class ListaContactosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSelect(contacto:Contacto):void{
+    this.selectedContacto=contacto;
+  }
 }
