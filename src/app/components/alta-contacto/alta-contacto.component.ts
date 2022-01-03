@@ -48,6 +48,8 @@ export class AltaContactoComponent implements OnInit {
       console.log('--registrado nuevo contacto');
       console.log(this.form.value);
 
+      //limpiamos el formulario
+      this.form.reset();
       //limpiamos el formarray
       this.cervezasFavoritas.clear();
       
@@ -98,7 +100,6 @@ export class AltaContactoComponent implements OnInit {
     } else {
       this.form.invalid
     }
-      this.form.reset();
   }
 
   //metodo para rellenar el array cervezas con la api
