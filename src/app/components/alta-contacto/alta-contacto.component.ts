@@ -50,7 +50,7 @@ export class AltaContactoComponent implements OnInit {
 
       //limpiamos el formulario
       this.form.reset();
-      
+      this.cervezasFavoritas.clear();
       
 
     }else{
