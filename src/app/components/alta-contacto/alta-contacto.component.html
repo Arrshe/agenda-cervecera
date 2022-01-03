@@ -99,7 +99,7 @@
                         formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index" role="option">
                         <input
                             class="agenda-cervecera-alta__checkbox--input"
-                            id="cervezaItem" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="cerveza.name"
+                            id="cervezaItem" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="toStr(cerveza)"
                             (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </div>
