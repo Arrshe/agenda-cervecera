@@ -1,0 +1,40 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-lista {
+	display: var(--basic-display);
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	max-width: 50rem;
+	padding: var(--main-padding);
+	margin: 0 auto;
+
+	&__wrapper {
+		@include display-column;
+		@include card-contacto;
+		animation: fadein 1s;
+	}
+	&__firstLine {
+		@include display-column;
+		@include basic-font;
+		padding: var(--basic-padding);
+		align-items: center;
+		justify-content: center;
+	}
+	&__nombreContacto {
+		@include basic-font;
+		font-size: var(--card-title-size);
+		font-family: var(--title-font-family);
+	}
+	&__botonDetalle{
+		@include basic-button;
+		display: var(--basic-display);
+		align-items: center;
+		justify-content: center;
+		border: none;
+		padding: 0.1rem;
+		&:hover{
+			background-color: var(--tertiary-bg-color);
+		}
+	}
+}
