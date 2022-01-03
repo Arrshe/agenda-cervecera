@@ -1,0 +1,57 @@
+@import '../../../assets/scss/utilities/mixins';
+
+.agenda-cervecera-detalle {
+	@include display-column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	max-width: 50rem;
+	padding: var(--main-padding);
+	margin: 0 auto;
+
+	&__wrapper {
+		@include display-column;
+		@include card-contacto;
+		animation: fadein 1s;
+	}
+	&__fechaNacimiento,
+	&__sexo,
+	&__telefono,
+	&__cervezasFavoritas {
+		@include basic-font;
+
+		&--wrapper {
+			background-color: var(--primary-bg-color);
+			padding: var(--basic-padding);
+			border-radius: var(--border-radius);
+			margin-bottom: 1rem;
+		}
+		&--item {
+            @include display-row;
+			@include basic-font;
+            align-items: center;
+            justify-content: center;
+			color: var(--primary-text-color);
+		}
+	}
+    &__imagen{
+        width: 2rem;
+        margin: 1rem;
+        &:hover{
+            transform: scale(1.5);
+            transition: 0.5s ease-in-out;
+        }
+    }
+	&__wrapperDescripcion{
+		display: var(--basic-display);
+		padding: 0.5rem;
+		background-color: var(--tertiary-bg-color);
+		border-radius: 1rem;
+
+		&--texto{
+			@include basic-font;
+			text-align:inherit;
+			font-style:italic;
+		}
+	}
+}

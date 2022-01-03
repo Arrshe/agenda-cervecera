@@ -9,7 +9,7 @@ import Contacto from 'src/app/model/Contacto';
 export class DetalleComponent implements OnInit {
 
   @Input()
-  contacto!: Contacto;
+  contacto?: Contacto;
 
   constructor() { }
 

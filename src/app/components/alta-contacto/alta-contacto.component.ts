@@ -40,6 +40,10 @@ export class AltaContactoComponent implements OnInit {
       this.contactosService.agregarContacto(this.form.value);
       console.log('--registrado nuevo contacto');
       console.log(this.form.value);
+
+      //limpiamos el formulario
+      this.form.reset();
+      
     }else{
       console.log('no valido');
     }

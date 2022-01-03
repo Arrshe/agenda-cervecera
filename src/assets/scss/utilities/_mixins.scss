@@ -50,6 +50,14 @@
 	padding: var(--basic-text-padding);
 }
 
+@mixin font-title {
+	font-family: var(--form-title-font-family);
+	font-size: var(--form-title-font-size);
+	font-weight: var(--form-font-weight);
+	color: var(--form-title-color);
+	text-align: var(--form-text-align);
+	padding: var(--form-text-padding);
+}
 /****COMPONENTS****/
 
 /****BUTTONS****/
@@ -128,15 +136,6 @@
 }
 
 /****FORMS****/
-
-@mixin form-title {
-	font-family: var(--form-title-font-family);
-	font-size: var(--form-title-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-title-color);
-	text-align: var(--form-text-align);
-	padding: var(--form-text-padding);
-}
 
 @mixin form-label {
 	font-family: var(--form-text-font-family);

@@ -14,25 +14,27 @@
 		@include card-contacto;
 		animation: fadein 1s;
 	}
+	&__firstLine {
+		@include display-column;
+		@include basic-font;
+		padding: var(--basic-padding);
+		align-items: center;
+		justify-content: center;
+	}
 	&__nombreContacto {
 		@include basic-font;
 		font-size: var(--card-title-size);
+		font-family: var(--title-font-family);
 	}
-	&__fechaNacimiento,
-	&__sexo,
-	&__telefono,
-	&__cervezasFavoritas {
-		@include basic-font;
-
-		&--wrapper {
-			background-color: var(--primary-bg-color);
-			padding: var(--basic-padding);
-			border-radius: var(--border-radius);
-			margin-bottom: 1rem;
-		}
-		&--item {
-			@include basic-font;
-			color: var(--primary-text-color);
+	&__botonDetalle{
+		@include basic-button;
+		display: var(--basic-display);
+		align-items: center;
+		justify-content: center;
+		border: none;
+		padding: 0.1rem;
+		&:hover{
+			background-color: var(--tertiary-bg-color);
 		}
 	}
 }
