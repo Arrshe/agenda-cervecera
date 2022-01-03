@@ -98,6 +98,7 @@
                     <div class="agenda-cervecera-alta__checkbox--wrapper"
                         formArrayName="cervezasFavoritas" *ngFor="let cerveza of cervezas; let i=index" role="option">
                         <input
+                            #checkboxes
                             class="agenda-cervecera-alta__checkbox--input"
                             id="cervezaItem" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="toStr(cerveza)"
                             (change)="onCheckBoxChange($event)" />
@@ -121,7 +122,7 @@
 
             <!--********** INPUT SUBMIT ***********-->
             <input class="agenda-cervecera-alta__submit" aria-label="enviar formulario" type="submit"
-                value="Enviar" [disabled]="form.invalid">
+                value="Enviar" [disabled]="form.invalid" (click)="uncheckAll()">
             <a routerLink="../lista" class="agenda-cervecera-alta__cancel">Cancelar</a>
         </form>
 
