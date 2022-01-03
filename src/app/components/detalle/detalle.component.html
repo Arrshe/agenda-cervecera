@@ -11,9 +11,9 @@
         <li class="agenda-cervecera-detalle__cervezasFavoritas--item"
             *ngFor="let cerveza of contacto.cervezasFavoritas; let i=index" aria-label="cerveza favorita">
             <img src="{{contacto.cervezasFavoritas[i].image_url}}" alt="cerveza" class="agenda-cervecera-detalle__imagen">
-            <h3 class="agenda-cervecera-detalle__nombreCerveza">{{contacto.cervezasFavoritas[i].name}}</h3>
+            <dt class="agenda-cervecera-detalle__nombreCerveza">{{contacto.cervezasFavoritas[i].name}}</dt>
             <div class="agenda-cervecera-detalle__wrapperDescripcion">
-                <p class="agenda-cervecera-detalle__wrapperDescripcion--texto">{{contacto.cervezasFavoritas[i].description}}</p>
+                <dd class="agenda-cervecera-detalle__wrapperDescripcion--texto">{{contacto.cervezasFavoritas[i].description}}</dd>
             </div>
         </li>   
     </ul> 
