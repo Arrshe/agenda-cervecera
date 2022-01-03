@@ -48,8 +48,7 @@ export class AltaContactoComponent implements OnInit {
       console.log('--registrado nuevo contacto');
       console.log(this.form.value);
 
-      //limpiamos el formulario
-      this.form.reset();
+      //limpiamos el formarray
       this.cervezasFavoritas.clear();
       
 
@@ -89,9 +88,9 @@ export class AltaContactoComponent implements OnInit {
       });   
     }
     this.uncheck=false;
-    
   }
 
+  //metodo para deseleccionar los checkboxes
   unCheckAll(e:Event):void{
     this.uncheck = true;
     if((e.target as HTMLInputElement).checked){
