@@ -14,7 +14,7 @@
                 *ngFor="let cerveza of contacto.cervezasFavoritas; let i=index" aria-label="cerveza favorita">
                 <img class="agenda-cervecera-lista__cervezasFavoritas--icono"
                     src="https://img.icons8.com/ios-glyphs/30/000000/beer-bottle.png" alt="icono botella de cerveza" />
-                {{contacto.cervezasFavoritas[i]}}
+                {{contacto.cervezasFavoritas[i].name}}
             </li>
         </ul>
     </div>

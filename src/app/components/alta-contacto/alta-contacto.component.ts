@@ -17,6 +17,8 @@ export class AltaContactoComponent implements OnInit {
   cerve!:Cerveza;
   sexos:Array<string> = ['Hombre', 'Mujer'];
   
+  toStr = JSON.stringify;
+
   form:FormGroup;
 
   constructor(private fb:FormBuilder, private cervezasService:CervezasService, private contactosService:ContactosService) {
@@ -49,8 +51,9 @@ export class AltaContactoComponent implements OnInit {
     
     //seleccionadas
     if ((e.target as HTMLInputElement).checked){
-      cervezasFavoritas.push(new FormControl((e.target as HTMLInputElement).value));
-      console.log((e.target as HTMLInputElement).value);
+      let value=JSON.parse((e.target as HTMLInputElement).value)
+      cervezasFavoritas.push(new FormControl(value));
+      console.log(value);
 
     //no seleccionadas
     }else{
