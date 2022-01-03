@@ -43,7 +43,7 @@ export class AltaContactoComponent implements OnInit {
 
       //limpiamos el formulario
       this.form.reset();
-      
+
     }else{
       console.log('no valido');
     }
@@ -61,15 +61,16 @@ export class AltaContactoComponent implements OnInit {
 
     //no seleccionadas
     }else{
-      let i: number = 0;
+      let i:number =0;
       cervezasFavoritas.controls.forEach((item) => {
-        if(item.value == (e.target as HTMLInputElement).value){
+        if(item.value.id == JSON.parse((e.target as HTMLInputElement).value).id){
           cervezasFavoritas.removeAt(i);
           return;
         }
         i++;
-      });
+      });   
     }
+    
   }
 
   //metodo para rellenar el array cervezas con la api
