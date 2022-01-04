@@ -1,9 +1,8 @@
 @import '../../../assets/scss/utilities/mixins';
 
 .agenda-cervecera-footer {
+	@include basic-align;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: var(--footer-bg-color);
 	padding: var(--footer-padding);
 

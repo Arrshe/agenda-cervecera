@@ -10,6 +10,11 @@
 	flex-direction: column;
 }
 
+@mixin basic-align{
+	align-items: center;
+	justify-content: center;
+}
+
 @mixin basic-border {
 	border-width: 0.05rem;
 	border-style: solid;
