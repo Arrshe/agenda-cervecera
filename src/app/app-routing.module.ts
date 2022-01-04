@@ -4,7 +4,7 @@ import { ListaContactosComponent } from './components/lista-contactos/lista-cont
 import { RegistroComponent } from './components/registro/registro.component';
 
 const routes: Routes = [
-  {path:'registro', component:RegistroComponent},
+  {path:'', component:RegistroComponent},
   {path:'lista', component:ListaContactosComponent}
 ];
 
