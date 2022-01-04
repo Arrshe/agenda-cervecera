@@ -21,8 +21,6 @@ export class AltaContactoComponent implements OnInit {
   sexos:Array<string> = ['Hombre', 'Mujer'];
 
   cervezasFavoritas!: FormArray;
-
-  uncheck:boolean = false;
   
   toStr = JSON.stringify;
 
@@ -52,17 +50,9 @@ export class AltaContactoComponent implements OnInit {
       this.form.reset();
       //limpiamos el formarray
       this.cervezasFavoritas.clear();
-      
-
     }else{
       console.log('no valido');
     }
-  }
-
-  uncheckAll() {
-    this.checkboxes.forEach((element) => {
-      element.nativeElement.checked = false;
-    });
   }
   
   //metodo para manejar las checkboxes
@@ -89,17 +79,13 @@ export class AltaContactoComponent implements OnInit {
         i++;
       });   
     }
-    this.uncheck=false;
   }
 
   //metodo para deseleccionar los checkboxes
-  unCheckAll(e:Event):void{
-    this.uncheck = true;
-    if((e.target as HTMLInputElement).checked){
-      !this.form.invalid
-    } else {
-      this.form.invalid
-    }
+  uncheckAll():void {
+    this.checkboxes.forEach((element) => {
+      element.nativeElement.checked = false;
+    });
   }
 
   //metodo para rellenar el array cervezas con la api
@@ -113,12 +99,6 @@ export class AltaContactoComponent implements OnInit {
         this.cervezas.push(this.cerve);
         
         console.log(this.cervezas);
-      }))
-      
+      })) 
   }
-
-  
-
-  
-
 }

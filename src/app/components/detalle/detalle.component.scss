@@ -14,6 +14,11 @@
 		@include card-contacto;
 		animation: fadein 1s;
 	}
+	&__nombreContacto {
+		@include basic-font;
+		font-size: var(--card-title-size);
+		font-family: var(--title-font-family);
+	}
 	&__fechaNacimiento,
 	&__sexo,
 	&__telefono,
@@ -27,31 +32,31 @@
 			margin-bottom: 1rem;
 		}
 		&--item {
-            @include display-row;
+			@include display-row;
 			@include basic-font;
-            align-items: center;
-            justify-content: center;
+			align-items: center;
+			justify-content: center;
 			color: var(--primary-text-color);
 		}
 	}
-    &__imagen{
-        width: 2rem;
-        margin: 1rem;
-        &:hover{
-            transform: scale(1.5);
-            transition: 0.5s ease-in-out;
-        }
-    }
-	&__wrapperDescripcion{
+	&__imagen {
+		width: 2rem;
+		margin: 1rem;
+		&:hover {
+			transform: scale(1.5);
+			transition: 0.5s ease-in-out;
+		}
+	}
+	&__wrapperDescripcion {
 		display: var(--basic-display);
 		padding: 0.5rem;
 		background-color: var(--tertiary-bg-color);
 		border-radius: 1rem;
 
-		&--texto{
+		&--texto {
 			@include basic-font;
-			text-align:inherit;
-			font-style:italic;
+			text-align: inherit;
+			font-style: italic;
 		}
 	}
 }

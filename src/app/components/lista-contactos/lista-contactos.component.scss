@@ -26,14 +26,14 @@
 		font-size: var(--card-title-size);
 		font-family: var(--title-font-family);
 	}
-	&__botonDetalle{
+	&__botonDetalle {
 		@include basic-button;
 		display: var(--basic-display);
 		align-items: center;
 		justify-content: center;
 		border: none;
 		padding: 0.1rem;
-		&:hover{
+		&:hover {
 			background-color: var(--tertiary-bg-color);
 		}
 	}
