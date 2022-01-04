@@ -63,17 +63,13 @@ export class AltaContactoComponent implements OnInit {
     if ((e.target as HTMLInputElement).checked){
       let value = JSON.parse((e.target as HTMLInputElement).value)
       this.cervezasFavoritas.push(new FormControl(value));
-      console.log(value);
-      console.log(this.cervezasFavoritas)
 
     //no seleccionadas
     }else{
       let i:number = 0;
       this.cervezasFavoritas.controls.forEach((item) => {
-        console.log("item id--- " + item.value.id )
         if(item.value.id == JSON.parse((e.target as HTMLInputElement).value).id){
           this.cervezasFavoritas.removeAt(i);
-          console.log("target id--- " + JSON.parse((e.target as HTMLInputElement).value).id )
           return;
         }
         i++;
@@ -97,8 +93,6 @@ export class AltaContactoComponent implements OnInit {
           cerveza.id,cerveza.name,cerveza.description,cerveza.image_url
         );
         this.cervezas.push(this.cerve);
-        
-        console.log(this.cervezas);
-      })) 
+      }));
   }
 }
