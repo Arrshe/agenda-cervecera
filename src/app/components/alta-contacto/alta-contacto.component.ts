@@ -29,7 +29,7 @@ export class AltaContactoComponent implements OnInit {
   constructor(private fb:FormBuilder, private cervezasService:CervezasService, private contactosService:ContactosService) {
     this.form = this.fb.group({
       nombreContacto: new FormControl('', [Validators.required, Validators.maxLength(30)]),
-      telefono: new FormControl('', [Validators.required, Validators.maxLength(9), Validators.minLength(9)]),
+      telefono: new FormControl('', [Validators.required, Validators.maxLength(9), Validators.minLength(9), Validators.pattern("^[0-9]*$")]),
       fechaNacimiento: new FormControl('', Validators.required),
       sexo: new FormControl('', Validators.required),
       cervezasFavoritas: this.fb.array([],[Validators.required, Validators.maxLength(3)])

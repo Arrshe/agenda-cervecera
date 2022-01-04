@@ -44,6 +44,10 @@
                     *ngIf="form.get('telefono')?.errors?.['maxlength']" role="alert">
                     *Tienen que ser máximo 9 números
                 </small>
+                <small class="agenda-cervecera-alta__item--error"
+                    *ngIf="form.get('telefono')?.errors?.['pattern']" role="alert">
+                    *Tienen que ser números
+                </small>
             </div>
 
             <!--********** INPUT FECHA NACIMIENTO CONTACTO ***********-->
