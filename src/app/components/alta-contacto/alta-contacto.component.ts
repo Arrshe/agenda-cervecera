@@ -54,6 +54,14 @@ export class AltaContactoComponent implements OnInit {
       console.log('no valido');
     }
   }
+
+  //método para limpiar el formulario
+  clearForm():void{
+    //limpiamos el formulario
+    this.form.reset();
+    //limpiamos el formarray
+    this.cervezasFavoritas.clear();
+  }
   
   //metodo para manejar las checkboxes
   onCheckBoxChange(e:Event):void{

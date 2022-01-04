@@ -126,7 +126,9 @@
             <!--********** INPUT SUBMIT ***********-->
             <input class="agenda-cervecera-alta__submit" aria-label="enviar formulario" type="submit"
                 value="Enviar" [disabled]="form.invalid" (click)="uncheckAll()">
-            <a routerLink="../lista" class="agenda-cervecera-alta__cancel">Cancelar</a>
+            <!--********** INPUT CANCEL ***********-->
+            <input class="agenda-cervecera-alta__clear" aria-label="limpiar formulario" type="button"
+            value="Limpiar" (click)="clearForm()">
         </form>
 
         <!--********** IMAGEN DERECHA ***********-->

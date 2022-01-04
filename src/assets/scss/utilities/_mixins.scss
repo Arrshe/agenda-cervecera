@@ -112,7 +112,7 @@
 	}
 }
 
-@mixin cancel-button {
+@mixin clear-button {
 	@include link-button;
 	@include basic-border;
 	background-color: var(--quaternary-bg-color);
