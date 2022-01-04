@@ -2,9 +2,8 @@
 
 .agenda-cervecera-detalle {
 	@include display-column;
+	@include basic-align;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 	max-width: 50rem;
 	padding: var(--main-padding);
 	margin: 0 auto;

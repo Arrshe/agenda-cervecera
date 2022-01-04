@@ -2,8 +2,7 @@
 
 .agenda-cervecera-alta {
 	@include display-column;
-	align-items: center;
-	justify-content: center;
+	@include basic-align;
 	width: 100%;
 	margin: 0 auto;
 
