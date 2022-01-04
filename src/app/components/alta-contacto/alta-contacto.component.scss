@@ -62,8 +62,8 @@
 	&__submit {
 		@include submit-button;
 	}
-	&__cancel {
-		@include cancel-button;
+	&__clear {
+		@include clear-button;
 		margin-left: 1rem;
 	}
 

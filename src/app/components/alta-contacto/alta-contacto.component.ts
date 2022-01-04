@@ -56,7 +56,7 @@ export class AltaContactoComponent implements OnInit {
   }
 
   //método para limpiar el formulario
-  onCancel():void{
+  clearForm():void{
     //limpiamos el formulario
     this.form.reset();
     //limpiamos el formarray
