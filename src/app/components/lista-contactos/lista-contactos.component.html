@@ -1,0 +1,14 @@
+<section class="agenda-cervecera-lista" aria-label="lista de contactos" >
+        <div class="agenda-cervecera-lista__wrapper" *ngFor="let contacto of contactos" aria-label="contacto">
+            <div class="agenda-cervecera-lista__firstLine">
+                <h2 class="agenda-cervecera-lista__nombreContacto">{{contacto.nombreContacto}}</h2>
+            <button class="agenda-cervecera-lista__botonDetalle" 
+            (click)="onSelect(contacto)">
+                <img class="agenda-cervecera-lista__imagenBoton" src="https://img.icons8.com/material-outlined/24/000000/individual-server.png" alt="icono detalle"/>
+            </button>
+            </div>
+        </div>
+        <div class="agenda-cervecera-lista__wrapper">
+            <app-detalle class="agenda-cervecera-lista__detalle" [contacto]="selectedContacto"></app-detalle>
+        </div>
+</section>
