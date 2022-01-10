@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 //import { CERVEZAS } from 'src/app/mock-cervezas/mock-cervezas';
+import iCerveza from 'src/app/model/Cerveza';
 import Cerveza from 'src/app/model/Cerveza';
-import ClaseCerveza from 'src/app/model/Cerveza';
 import { CervezasService } from 'src/app/services/cervezas.service';
 import { ContactosService } from 'src/app/services/contactos.service';
 
@@ -16,8 +16,8 @@ export class AltaContactoComponent implements OnInit {
   @ViewChildren("checkboxes")
   checkboxes!: QueryList<ElementRef>;
 
-  cervezas:Cerveza[]=[]
-  cerve!:Cerveza;
+  cervezas:iCerveza[]=[]
+  cerve!:iCerveza;
   sexos:Array<string> = ['Hombre', 'Mujer'];
 
   cervezasFavoritas!: FormArray;
@@ -96,8 +96,8 @@ export class AltaContactoComponent implements OnInit {
   getCervezasApi():void{
     this.cervezasService.getCervezasApi().subscribe(data=>
       //data es un array de objetos
-      data.forEach((cerveza: Cerveza,i: number) => {
-        this.cerve = new ClaseCerveza(
+      data.forEach((cerveza: iCerveza,i: number) => {
+        this.cerve = new Cerveza(
           cerveza.id,cerveza.name,cerveza.description,cerveza.image_url
         );
         this.cervezas.push(this.cerve);

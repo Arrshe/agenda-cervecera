@@ -1,11 +1,11 @@
-export default interface Cerveza{
+export default interface iCerveza{
     id:number;
     name:string;
     description:string;
     image_url:string;
 }
 
-export default class ClaseCerveza{
+export default class Cerveza{
     public id:number
     public name:string;
     public description:string;
