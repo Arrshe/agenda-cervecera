@@ -16,7 +16,7 @@ export class AltaContactoComponent implements OnInit {
   @ViewChildren("checkboxes")
   checkboxes!: QueryList<ElementRef>;
 
-  cervezas:iCerveza[]=[]
+  cervezas:iCerveza[]=[];
   cerve!:iCerveza;
   sexos:Array<string> = ['Hombre', 'Mujer'];
 
