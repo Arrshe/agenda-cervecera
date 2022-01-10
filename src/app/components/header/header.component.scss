@@ -1,29 +1,29 @@
-@import '../../../assets/scss/utilities/mixins';
+@import '../../../styles.scss';
 
 .agenda-cervecera-header {
 	@include display-row;
-	background-color: var(--tertiary-bg-color);
-	padding: var(--basic-padding);
-	align-items: var(--header-align);
-	justify-content: var(--header-space);
+	background-color: $tertiary-bg-color;
+	padding: $basic-padding;
+	align-items: $header-align;
+	justify-content: $header-space;
 	@include for-mobile {
 		@include display-column;
 	}
 
 	&__titulo {
-		font-family: var(--header-font-family);
-		font-size: var(--header-font-size);
-		color: var(--main-text-decoration);
+		font-family: $header-font-family;
+		font-size: $header-font-size;
+		text-decoration: none;
 		@include for-mobile {
 			padding-bottom: 1rem;
 		}
 	}
 	&__lista {
 		@include display-row;
-		padding: var(--basic-padding);
-		align-items: var(--nav-align);
-		justify-content: var(--nav-space);
-		width: var(--nav-width);
+		padding: $basic-padding;
+		align-items: $nav-align;
+		justify-content: $nav-space;
+		width: $nav-width;
 
 		&--link {
 			@include nav-button;

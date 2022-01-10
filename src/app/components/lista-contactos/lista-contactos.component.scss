@@ -1,11 +1,11 @@
-@import '../../../assets/scss/utilities/mixins';
+@import '../../../styles.scss';
 
 .agenda-cervecera-lista {
 	@include basic-align;
-	display: var(--basic-display);
+	display: $basic-display;
 	flex-wrap: wrap;
 	max-width: 50rem;
-	padding: var(--main-padding);
+	padding: $main-padding;
 	margin: 0 auto;
 
 	&__wrapper {
@@ -17,21 +17,21 @@
 		@include display-column;
 		@include basic-font;
 		@include basic-align;
-		padding: var(--basic-padding);
+		padding: $basic-padding;
 	}
 	&__nombreContacto {
 		@include basic-font;
-		font-size: var(--card-title-size);
-		font-family: var(--title-font-family);
+		font-size: $card-title-size;
+		font-family: $title-font-family;
 	}
 	&__botonDetalle {
 		@include basic-button;
 		@include basic-align;
-		display: var(--basic-display);
+		display: $basic-display;
 		border: none;
 		padding: 0.1rem;
 		&:hover {
-			background-color: var(--tertiary-bg-color);
+			background-color: $tertiary-bg-color;
 		}
 	}
 }

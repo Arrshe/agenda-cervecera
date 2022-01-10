@@ -1,10 +1,10 @@
-@import '../../../assets/scss/utilities/mixins';
+@import '../../../styles.scss';
 
 .agenda-cervecera-main {
 	@include display-column;
 	align-items: center;
 	justify-content: space-evenly;
-	padding: var(--main-padding);
+	padding: $main-padding;
 	width: auto;
 	margin: 0 auto;
 	@include for-laptop {

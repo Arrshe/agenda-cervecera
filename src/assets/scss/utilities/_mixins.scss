@@ -1,3 +1,10 @@
+@import '../base/base';
+@import '../utilities/colors';
+@import '../utilities/animations';
+@import '../utilities/breakpoints';
+@import '../components/components';
+@import '../layout/layout';
+
 /****LAYOUT****/
 @mixin display-row {
 	display: flex;
@@ -18,7 +25,7 @@
 @mixin basic-border {
 	border-width: 0.05rem;
 	border-style: solid;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 }
 
 /****MEDIA QUERIES****/
@@ -48,94 +55,94 @@
 
 /****FONTS****/
 @mixin basic-font {
-	font-family: var(--body-font-family);
-	font-size: var(--base-font-size);
-	font-weight: var(--base-font-weight);
-	color: var(--tertiary-text-color);
-	padding: var(--basic-text-padding);
+	font-family: $body-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	color: $tertiary-text-color;
+	padding: $basic-text-padding;
 }
 
 @mixin font-title {
-	font-family: var(--form-title-font-family);
-	font-size: var(--form-title-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-title-color);
-	text-align: var(--form-text-align);
-	padding: var(--form-text-padding);
+	font-family: $form-title-font-family;
+	font-size: $form-title-font-size;
+	font-weight: $form-font-weight;
+	color: $form-title-color;
+	text-align: $form-text-align;
+	padding: $form-text-padding;
 }
 /****COMPONENTS****/
 
 /****BUTTONS****/
 @mixin basic-button {
-	padding: var(--header-padding);
-	border-radius: var(--border-radius);
-	font-family: var(--body-font-family);
-	font-size: var(--base-font-size);
-	font-weight: var(--base-font-weight);
+	padding: $header-padding;
+	border-radius: $border-radius;
+	font-family: $body-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
 }
 
 @mixin link-button {
 	@include basic-button;
-	text-decoration: var(--basic-text-decoration);
+	text-decoration: $basic-text-decoration;
 }
 
 @mixin nav-button {
 	@include link-button;
-	background-color: var(--primary-bg-color);
-	color: var(--primary-text-color);
+	background-color: $primary-bg-color;
+	color: $primary-text-color;
 
 	&:hover {
-		background-color: var(--secondary-bg-color);
-		color: var(--tertiary-text-color);
-		transition: var(--button-transition);
+		background-color: $secondary-bg-color;
+		color: $tertiary-text-color;
+		transition: $button-transition;
 	}
 }
 
 @mixin submit-button {
 	@include basic-button;
 	@include basic-border;
-	background-color: var(--secondary-bg-color);
-	color: var(--tertiary-text-color);
-	border-color: var(--primary-border-color);
+	background-color: $secondary-bg-color;
+	color: $tertiary-text-color;
+	border-color: $primary-border-color;
 
 	&:hover {
-		background-color: var(--primary-hover-bg-color);
-		color: var(--primary-hover-text-color);
-		border-color: var(--primary-hover-border-color);
-		transition: var(--button-transition);
+		background-color: $primary-hover-bg-color;
+		color: $primary-hover-text-color;
+		border-color: $primary-hover-border-color;
+		transition: $button-transition;
 	}
 
 	&:disabled {
-		background-color: var(--button-bg-disabled);
-		color: var(--button-text-disabled);
-		border-color: var(--disabled-border-color);
+		background-color: $button-bg-disabled;
+		color: $button-text-disabled;
+		border-color: $disabled-border-color;
 	}
 }
 
 @mixin clear-button {
 	@include link-button;
 	@include basic-border;
-	background-color: var(--quaternary-bg-color);
-	color: var(--tertiary-text-color);
-	border-color: var(--secondary-border-color);
+	background-color: $quaternary-bg-color;
+	color: $tertiary-text-color;
+	border-color: $secondary-border-color;
 
 	&:hover {
-		background-color: var(--primary-bg-color);
-		color: var(--error-text-color);
-		border-color: var(--secondary-hover-border-color);
-		transition: var(--button-transition);
+		background-color: $primary-bg-color;
+		color: $error-text-color;
+		border-color: $secondary-hover-border-color;
+		transition: $button-transition;
 	}
 }
 
 @mixin footer-button {
 	@include link-button;
-	background-color: var(--primary-bg-color);
-	color: var(--quaternary-text-color);
+	background-color: $primary-bg-color;
+	color: $quaternary-text-color;
 	padding: 0.5rem;
 
 	&:hover {
-		background-color: var(--secondary-bg-color);
-		color: var(--tertiary-text-color);
+		background-color: $secondary-bg-color;
+		color: $tertiary-text-color;
 		padding: 0.5rem;
 	}
 }
@@ -143,18 +150,18 @@
 /****FORMS****/
 
 @mixin form-label {
-	font-family: var(--form-text-font-family);
-	font-size: var(--form-label-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-label-color);
-	padding: var(--form-text-padding);
+	font-family: $form-text-font-family;
+	font-size: $form-label-font-size;
+	font-weight: $form-font-weight;
+	color: $form-label-color;
+	padding: $form-text-padding;
 }
 
 @mixin form-input {
-	font-family: var(--form-text-font-family);
-	font-size: var(--form-text-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-input-color);
+	font-family: $form-text-font-family;
+	font-size: $form-text-font-size;
+	font-weight: $form-font-weight;
+	color: $form-input-color;
 	outline-color: #bf9039;
 }
 
@@ -163,26 +170,26 @@
 }
 
 @mixin form-small {
-	font-family: var(--form-text-font-family);
-	font-size: var(--form-small-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-error-color);
-	padding: var(--form-text-padding);
+	font-family: $form-text-font-family;
+	font-size: $form-small-font-size;
+	font-weight: $form-font-weight;
+	color: $form-error-color;
+	padding: $form-text-padding;
 }
 
 @mixin form-span {
-	font-family: var(--form-text-font-family);
-	font-size: var(--form-label-font-size);
-	font-weight: var(--form-font-weight);
-	color: var(--form-label-color);
-	padding: var(--form-text-padding);
+	font-family: $form-text-font-family;
+	font-size: $form-label-font-size;
+	font-weight: $form-font-weight;
+	color: $form-label-color;
+	padding: $form-text-padding;
 }
 
 /****CARDS****/
 @mixin card-contacto {
 	@include display-column;
-	padding: var(--card-padding);
+	padding: $card-padding;
 	margin: 0rem 1rem 1rem 1rem;
-	background-color: var(--card-bg-color);
-	border-radius: var(--card-border-radius);
+	background-color: $card-bg-color;
+	border-radius: $card-border-radius;
 }

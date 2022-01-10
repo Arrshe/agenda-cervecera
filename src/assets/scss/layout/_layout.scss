@@ -1,10 +1,9 @@
-@import url('./_header.scss');
-@import url('./_navigation.scss');
-@import url('./_main.scss');
-@import url('./_forms.scss');
-@import url('./_footer.scss');
+@import 'header';
+@import 'navigation';
+@import 'main';
+@import 'forms';
+@import 'footer';
 
-:root {
-	--basic-padding: 1rem;
-	--basic-display: flex;
-}
+
+$basic-padding: 1rem;
+$basic-display: flex;

@@ -1,25 +1,27 @@
-:root {
-	/****FORM FONT****/
-	--form-text-font-family: var(--body-font-family);
-	--form-title-font-family: var(--title-font-family);
-	--form-title-font-size: var(--title-font-size);
-	--form-label-font-size: 16px;
-	--form-small-font-size: 13px;
-	--form-text-font-size: var(--base-font-size);
-	--form-font-weight: var(--base-font-weight);
+@import '../base/typo';
+@import '../utilities/colors';
 
-	/****FORM TEXT COLOR****/
-	--form-title-color: var(--secondary-text-color);
-	--form-label-color: var(--secondary-text-color);
-	--form-input-color: var(--primary-text-color);
-	--form-error-color: var(--error-text-color);
+/****FORM FONT****/
+$form-text-font-family: $body-font-family;
+$form-title-font-family: $title-font-family;
+$form-title-font-size: $title-font-size;
+$form-label-font-size: 16px;
+$form-small-font-size: 13px;
+$form-text-font-size: $base-font-size;
+$form-font-weight: $base-font-weight;
 
-	/****FORM TEXT PADDING****/
-	--form-text-align: var(--basic-text-align);
+/****FORM TEXT COLOR****/
+$form-title-color: $secondary-text-color;
+$form-label-color: $secondary-text-color;
+$form-input-color: $primary-text-color;
+$form-error-color: $error-text-color;
 
-	/****FORM TEXT PADDING****/
-	--form-text-padding: 0.3rem 0rem;
+/****FORM TEXT PADDING****/
+$form-text-align: $basic-text-align;
 
-	/****FORM LAYOUT****/
-	--form-padding: 1rem 6rem;
-}
+/****FORM TEXT PADDING****/
+$form-text-padding: 0.3rem 0rem;
+
+/****FORM LAYOUT****/
+$form-padding: 1rem 6rem;
+

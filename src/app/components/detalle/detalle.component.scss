@@ -1,11 +1,11 @@
-@import '../../../assets/scss/utilities/mixins';
+@import '../../../styles.scss';
 
 .agenda-cervecera-detalle {
 	@include display-column;
 	@include basic-align;
 	flex-wrap: wrap;
 	max-width: 50rem;
-	padding: var(--main-padding);
+	padding: $main-padding;
 	margin: 0 auto;
 
 	&__wrapper {
@@ -15,8 +15,8 @@
 	}
 	&__nombreContacto {
 		@include basic-font;
-		font-size: var(--card-title-size);
-		font-family: var(--title-font-family);
+		font-size: $card-title-size;
+		font-family: $title-font-family;
 	}
 	&__fechaNacimiento,
 	&__sexo,
@@ -25,9 +25,9 @@
 		@include basic-font;
 
 		&--wrapper {
-			background-color: var(--primary-bg-color);
-			padding: var(--basic-padding);
-			border-radius: var(--border-radius);
+			background-color: $primary-bg-color;
+			padding: $basic-padding;
+			border-radius: border-radius;
 			margin-bottom: 1rem;
 		}
 		&--item {
@@ -35,7 +35,7 @@
 			@include basic-font;
 			align-items: center;
 			justify-content: center;
-			color: var(--primary-text-color);
+			color: primary-text-color;
 		}
 	}
 	&__imagen {
@@ -47,9 +47,9 @@
 		}
 	}
 	&__wrapperDescripcion {
-		display: var(--basic-display);
+		display: $basic-display;
 		padding: 0.5rem;
-		background-color: var(--tertiary-bg-color);
+		background-color: $tertiary-bg-color;
 		border-radius: 1rem;
 
 		&--texto {
