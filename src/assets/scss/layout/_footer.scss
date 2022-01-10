@@ -1,8 +1,8 @@
-:root {
-	--footer-padding: 2rem;
-	--footer-bg-color: var(--tertiary-bg-color);
-	/****FONTS****/
-	--footer-font-family: var(--body-font-family);
-	--footer-font-size: var(--base-font-size);
-	--footer-font-weight: var(--base-font-weight);
-}
+
+$footer-padding: 2rem;
+$footer-bg-color: $tertiary-bg-color;
+/****FONTS****/
+$footer-font-family: $body-font-family;
+$footer-font-size: $base-font-size;
+$footer-font-weight: $base-font-weight;
+

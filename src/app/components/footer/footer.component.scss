@@ -1,15 +1,15 @@
-@import '../../../assets/scss/utilities/mixins';
+@import '../../../styles.scss';
 
 .agenda-cervecera-footer {
 	@include basic-align;
 	display: flex;
-	background-color: var(--footer-bg-color);
-	padding: var(--footer-padding);
+	background-color: $footer-bg-color;
+	padding: $footer-padding;
 
 	&__copyright {
-		font-family: var(--footer-font-family);
-		font-size: var(--footer-font-size);
-		font-weight: var(--footer-font-weight);
+		font-family: $footer-font-family;
+		font-size: $footer-font-size;
+		font-weight: $footer-font-weight;
 		text-align: center;
 		line-height: 2rem;
 	}
