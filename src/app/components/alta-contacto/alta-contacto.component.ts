@@ -61,6 +61,7 @@ export class AltaContactoComponent implements OnInit {
     this.form.reset();
     //limpiamos el formarray
     this.cervezasFavoritas.clear();
+    this.uncheckAll();
   }
   
   //metodo para manejar las checkboxes
