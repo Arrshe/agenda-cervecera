@@ -1,0 +1,27 @@
+@import '../base/typo';
+@import '../utilities/colors';
+
+/****FORM FONT****/
+$form-text-font-family: $body-font-family;
+$form-title-font-family: $title-font-family;
+$form-title-font-size: $title-font-size;
+$form-label-font-size: 16px;
+$form-small-font-size: 13px;
+$form-text-font-size: $base-font-size;
+$form-font-weight: $base-font-weight;
+
+/****FORM TEXT COLOR****/
+$form-title-color: $secondary-text-color;
+$form-label-color: $secondary-text-color;
+$form-input-color: $primary-text-color;
+$form-error-color: $error-text-color;
+
+/****FORM TEXT PADDING****/
+$form-text-align: $basic-text-align;
+
+/****FORM TEXT PADDING****/
+$form-text-padding: 0.3rem 0rem;
+
+/****FORM LAYOUT****/
+$form-padding: 1rem 6rem;
+

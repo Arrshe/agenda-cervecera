@@ -1,0 +1,61 @@
+@import '../../../styles.scss';
+
+.agenda-cervecera-detalle {
+	@include display-column;
+	@include basic-align;
+	flex-wrap: wrap;
+	max-width: 50rem;
+	padding: $main-padding;
+	margin: 0 auto;
+
+	&__wrapper {
+		@include display-column;
+		@include card-contacto;
+		animation: fadein 1s;
+	}
+	&__nombreContacto {
+		@include basic-font;
+		font-size: $card-title-size;
+		font-family: $title-font-family;
+	}
+	&__fechaNacimiento,
+	&__sexo,
+	&__telefono,
+	&__cervezasFavoritas {
+		@include basic-font;
+
+		&--wrapper {
+			background-color: $primary-bg-color;
+			padding: $basic-padding;
+			border-radius: border-radius;
+			margin-bottom: 1rem;
+		}
+		&--item {
+			@include display-row;
+			@include basic-font;
+			align-items: center;
+			justify-content: center;
+			color: $primary-text-color;
+		}
+	}
+	&__imagen {
+		width: 2rem;
+		margin: 1rem;
+		&:hover {
+			transform: scale(1.5);
+			transition: 0.5s ease-in-out;
+		}
+	}
+	&__wrapperDescripcion {
+		display: $basic-display;
+		padding: 0.5rem;
+		background-color: $tertiary-bg-color;
+		border-radius: 1rem;
+
+		&--texto {
+			@include basic-font;
+			text-align: inherit;
+			font-style: italic;
+		}
+	}
+}

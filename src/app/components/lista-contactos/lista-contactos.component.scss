@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+.agenda-cervecera-lista {
+	@include basic-align;
+	display: $basic-display;
+	flex-wrap: wrap;
+	max-width: 50rem;
+	padding: $main-padding;
+	margin: 0 auto;
+
+	&__wrapper {
+		@include display-column;
+		@include card-contacto;
+		animation: fadein 1s;
+	}
+	&__firstLine {
+		@include display-column;
+		@include basic-font;
+		@include basic-align;
+		padding: $basic-padding;
+	}
+	&__nombreContacto {
+		@include basic-font;
+		font-size: $card-title-size;
+		font-family: $title-font-family;
+	}
+	&__botonDetalle {
+		@include basic-button;
+		@include basic-align;
+		display: $basic-display;
+		border: none;
+		padding: 0.1rem;
+		&:hover {
+			background-color: $tertiary-bg-color;
+		}
+	}
+}

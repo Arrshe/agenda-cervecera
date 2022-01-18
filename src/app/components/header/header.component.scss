@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+.agenda-cervecera-header {
+	@include display-row;
+	background-color: $tertiary-bg-color;
+	padding: $basic-padding;
+	align-items: $header-align;
+	justify-content: $header-space;
+	@include for-mobile {
+		@include display-column;
+	}
+
+	&__titulo {
+		font-family: $header-font-family;
+		font-size: $header-font-size;
+		text-decoration: none;
+		@include for-mobile {
+			padding-bottom: 1rem;
+		}
+	}
+	&__lista {
+		@include display-row;
+		padding: $basic-padding;
+		align-items: $nav-align;
+		justify-content: $nav-space;
+		width: $nav-width;
+
+		&--link {
+			@include nav-button;
+		}
+	}
+}

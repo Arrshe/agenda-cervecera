@@ -1,0 +1,19 @@
+@import '../../../styles.scss';
+
+.agenda-cervecera-footer {
+	@include basic-align;
+	display: flex;
+	background-color: $footer-bg-color;
+	padding: $footer-padding;
+
+	&__copyright {
+		font-family: $footer-font-family;
+		font-size: $footer-font-size;
+		font-weight: $footer-font-weight;
+		text-align: center;
+		line-height: 2rem;
+	}
+	&__link {
+		@include footer-button;
+	}
+}
