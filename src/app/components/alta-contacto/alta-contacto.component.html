@@ -104,7 +104,7 @@
                         <input
                             #checkboxes
                             class="agenda-cervecera-alta__checkbox--input"
-                            id="cervezaItem" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="toStr(cerveza)"
+                            id="{{i}}" type="checkbox" role="checkbox" aria-label="opción cerveza" [value]="toStr(cerveza)"
                             (change)="onCheckBoxChange($event)" />
                         {{cerveza.name}}
                     </div>
