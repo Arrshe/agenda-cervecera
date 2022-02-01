@@ -1,63 +1,76 @@
+import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps';
 
+describe('formulario de registro', () => {
+  it('abre la página de registro, rellena el formulario y lo envía', () => {
+    cy.visit('/');
 
-describe("formulario de registro", () => {
-    it("abre la página de registro, rellena el formulario y lo envía", () => {
-        cy.visit("/");
+    //nombre input
+    cy.get('#nombreContacto').type('pepe');
 
-        //nombre input
-        cy.get('#nombreContacto').type('pepe');
+    //telefono input
+    cy.get('#telefono').type('628930475');
 
-        //telefono input
-        cy.get('#telefono').type('628930475');
+    //fecha de nacimiento
+    cy.get('#fechaNacimiento').click().type('1997-12-04');
 
-        //fecha de nacimiento
-        cy.get('#fechaNacimiento').click().type('1997-12-04');
+    //sexo
+    cy.get('#sexoItem').check();
 
-        //sexo
-        cy.get("#sexoItem").check()
+    //cervezas favoritas
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#0').check();
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#3').check();
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#5').check();
 
-        //cervezas favoritas
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#0').check()
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#3').check()
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#5').check()
-
-
-        //submit
-        cy.get(".agenda-cervecera-alta__submit").click()
-    });
-
+    //submit
+    cy.get('.agenda-cervecera-alta__submit').click();
+  });
+});
+/*
+Given(`Entro en la página de la agenda cervecera`, () => {
+  cy.visit('/');
 });
 
-describe("formulario de registro", () => {
-    it("abre la página de registro, rellena el formulario y lo limpia", () => {
-        cy.visit("/");
+And(`Relleno los campos del formulario`, () => {
+  //nombre input
+  cy.get('#nombreContacto').type('pepe');
+  //telefono input
+  cy.get('#telefono').type('628930475');
+  //fecha de nacimiento
+  cy.get('#fechaNacimiento').click().type('1997-12-04');
+  //sexo
+  cy.get('#sexoItem').check();
+  //cervezas favoritas
+  cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#0').check();
+  cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#3').check();
+  cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#5').check();
+});
 
-        //nombre input
-        cy.get('#nombreContacto').type('pepe');
+When(`Pulso sobre el botón de enviar`, () => {
+    cy.get('.agenda-cervecera-alta__submit').click();
+});*/
 
-        //telefono input
-        cy.get('#telefono').type('628930475');
+describe('formulario de registro', () => {
+  it('abre la página de registro, rellena el formulario y lo limpia', () => {
+    cy.visit('/');
 
-        //fecha de nacimiento
-        cy.get('#fechaNacimiento').click().type('1997-12-04');
+    //nombre input
+    cy.get('#nombreContacto').type('pepe');
 
-        //sexo
-        cy.get("#sexoItem").check()
+    //telefono input
+    cy.get('#telefono').type('628930475');
 
-        //cervezas favoritas
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#0').check()
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#3').check()
-        cy.get(".agenda-cervecera-alta__checkbox--wrapper")
-            .children('#5').check()
+    //fecha de nacimiento
+    cy.get('#fechaNacimiento').click().type('1997-12-04');
 
+    //sexo
+    cy.get('#sexoItem').check();
 
-        //submit
-        cy.get(".agenda-cervecera-alta__clear").click()
-    });
+    //cervezas favoritas
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#0').check();
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#3').check();
+    cy.get('.agenda-cervecera-alta__checkbox--wrapper').children('#5').check();
 
+    //submit
+    cy.get('.agenda-cervecera-alta__clear').click();
+  });
 });
