@@ -1,4 +1,4 @@
-import { Input } from "@angular/core";
+
 
 describe("formulario de registro", () => {
     it("abre la página de registro, rellena el formulario y lo envía", () => {
